@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Param Food Complex · Pure Veg, Gwalior</title>
+<meta name="description" content="Pav bhaji, dosas, chaat, thalis, China Town, sizzlers, cakes and sundaes. 100% pure veg. Order on WhatsApp from Param Food Complex, Gwalior.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,700&family=Manrope:wght@400;500;700;800&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#160c08; --bg-2:#20120c; --card:#2a1810; --card-2:#341f15; --line:#3f281c;
+  --ink:#fbefe0; --muted:#c9ab95; --dim:#8f7564;
+  --butter:#ffc94a; --saffron:#ff8a2a; --chili:#e2412b; --leaf:#4cc27a; --cream:#fff4e3;
+  --glow:0 0 0 1px rgba(255,201,74,.25),0 20px 50px -20px rgba(255,138,42,.55);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:200px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font-family:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.02;margin:0;letter-spacing:-.02em}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--butter)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:15px 26px;font:800 15.5px Manrope;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,filter .15s,background .15s}
+.btn:active{transform:scale(.96)}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-hot{background:linear-gradient(135deg,var(--butter),var(--saffron));color:#2a1208;box-shadow:var(--glow)}
+.btn-hot:hover{filter:brightness(1.08)}
+.btn-ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid rgba(255,255,255,.14)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-sm{padding:10px 18px;font-size:14px}
+.veg{width:14px;height:14px;border:2px solid var(--leaf);border-radius:3px;display:inline-grid;place-items:center;flex:none}
+.veg::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--leaf)}
+
+.ribbon{background:#0b0503;color:var(--dim);font-size:12px;text-align:center;padding:6px 16px}
+
+header{position:sticky;top:0;z-index:40;background:rgba(22,12,8,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand svg{width:40px;height:40px}
+.brand .logo{width:52px;height:52px;flex:none;border-radius:50%;background:url(data:image/webp;base64,UklGRhAuAABXRUJQVlA4WAoAAAAQAAAAvwAAvwAAQUxQSAsJAAABsIVts2k71j9GjbAVt23bRty2fWzbtu3k2Gbbts20u+Mne4+q+i/2zsraa81Zz7mMiAlAkyYpkjB8WmvDbfbY84hZM2fOnL7XHttuPEEwfJIiKSGeSUrC0MnbznnD5+dfdPtjzy0cGOSwg4OLnn/szkt++cU3H7XDVAxbJEci5ZIAYOohb/3xtQucnfqw7Pi5G+e98/B1ASCVnEKQRABg/aO/cNkLHNa0qpq5s0N3N9NajcO+cvVXT9oEAERS2+UCYPRe773oJZL0qurOkXXT6iS58PKPHjAeQMktliQB5eAv3UmSVtXZs25VSfK+b04fB6SS2ikLgJ0+djtJVnX2vFt1kvd+bk8AktsnZ2CtM/87SLoa+9bUSbviVVOALO0iGdj2C4+TVGOfm5Jc8PVdgCTtkTOw3/xlpKqzCU3J+sfDgSTtkDNw0J+drM7G9EryPzOAnJsvCbD/n0hXZ6O6Ovnv6YCkhhNgm/mkKxtYjfzT7oA0Wc6Y+NlldGVDq3PgG+sj5cYS4KyHSWWDK/nMaxMkNVJO2O4vpDob3ZW8dE8gN5AgvX0x1dj4rhz8yChI06SMrS8ila2o5LV7IKdGEeCCl1mdLenK5e8ApEEK1vwxqWxRJf+wDkpTpIJdb6c6W9UrHzoEkhohZZy9iJWtqxx4M1JugAx8ijS2sDm/MwrSd4LVfkd1trJX/mcKpM8E617JytauvHNrSF8VbHM/K1u88uk9UfpIsNsCKltd+crBKH1TcMCLVLa8cclRKH1ScNBCGlvfOHAMSl8UHLiQygAaB4+C9IFglxdpDKFx+UEoPSfY+hkqg2h8ZW9Ij2Ws8wCVYTQu2Bq5p3IafzWVgVTeOwW5h5Kk37EylMqLx0rqnYLPsDKYlT9C6RnBWaweDVa+FaVHMnZZas5wutZDIT2R8up30xhQ4xPrptwLBT+lMqTKfyRJIyc4n5VBrXwfZMQytlxoHhXXgb0gI5QkXUpjWI13jJM0MoK3UhlY5WcgI5Kx1WL1yLjq3sgjIfgnlaE13jAqp+4JTqMyuMq3QrqW8sTH3aLj9tKGKXdL8Fkqw6v8CaRLOW211Dw+bnVvSJfwSyoDrPwfclcE+6gxxMojId3I+Cs1StdK7kLGvmYMsvIoSDf+So2S8RpJqyTYW41hNs6FrErGL1jjpPwf8ipkbLHMPU503RvSmeBzVAZa+dNVSGnCU7RIORdugNRJwdlUhlr5LkgnCZd4sIx3jE5pZRk7DjiD7TwUsrKCT7JGq/IHHSSMuZsWLePTE5CGExxEZ7iNJ0CGK/gya7zUf7GSlEbfTYuXc8EEpCGCPc0ZcOMcyJCC97FGrPKrwyVcQo2Y8Y6SACSs+zI9Ys4V2yEDgmNoDLnyVShAwRdYY1b5MwiQcDk1Zsa7RiElTH2JHjPniq2QBQfTGXTjCSgFb2GNWuVnUAQ/pkZN+XfklK6Nm/G+scCkBfSoOZdvDGynjLvzQGAOLW7Kc4E3UuNW+THg86xxU/4UmE+Nm/E/wEW0yN2W8+2Rcz4+Ya1H6ZF7ftMNn4vdsp22WRg5su6zxwAj75wZv+n0yBnPmBW9c2ZG7+z//82I3ll7DjDyztl7DAZv5raL6IGj7rfx85FzLt95wmOxe3EzuZMWuScm4dLIGe/M+CU1chcBX2SNm3Ie8GZq3Co/CRxFi5vyAmAHY9ydhwBTnqNHzbliM6R8IzVqxgfHQzAvbsp/Ixe8kzVuX0QRHE6P26koGesspMfMObgdMlK6mhoz4/1jkFDwVdaYVf4SAghOosZM+QYUIGHDxfSIudedkQEkXEmNmPHe0Rha8FHWiFX/DmSIYH/3iBmPHS5h7AO0eDmfn4I0BIJvs8ZL/ffIWMl0WsB4BspwCeMeokXL+fxUpOEg+CJrtCrnQ7DSjD3Uo2WcnTpAyte6xsr4wDikDgpew2ApPwxBhwlTn6dHyn3Z5sidQPAN1kgpf4uMjjN2GHAPlPkhkM6Q8SdqnJRXpYRVFBxCi9RJkFVBThdTo2R+2+iUVklwGC1MPBWCVc+4mBoj9dtG59QFwWFuMTKeAkE3BX+lRkh5jWR0aecV5vFx5aGQ7kDwbWp8lL+HoMspr/uceXTclmyZcrcgeA01OsqPQND1lOVKamyMd4/PqXvI2HVAPTTK6RCMpOCj1MgovwPBiCYZfRMtLsaHJuQ0MsjYdbl6VFz9cAhGWvB21qgoPwfByAv+TI2J8upRknogp2mP0iJi/uLmyOhFwYGD6vHwyuMh6M2CN7HGo/ITKOjVgu+xRqPyD5DUM0nG/Ic1Fsqb1swJvZsx+S5qJIxPboKMXs7Y8mlaHIyv7AlBbwv2fIUWBfMVM1DQ6wUHLaPFwM2ORUHvC44apEXAjBegoB8LjhmgtZ87L0BBfxYcvZTWdka9AAX9WnDwQmq7GQeOQUH/Fuy9gLXNlK9Mh6CfBdvczdpelU/tiYL+Fky9iNVbqvL6TVHQ74LRP6BbG5nx92tC0P8ZeJtS20fJTwAZTZgypj/G6i1T+fyJyAkNWbDBX0lrE3NesSUEzSnA+weo7VHJz4+CoElzxn43060dzHj/TCCjYQvGfVqp3nxeyW9OhCQ0rgAHXEtq0yl5xyxA0MRJUN72AqlNps7FHx4PSWjoDGzyQ6NZU5mSv90OEDR3EmD/f5OmTWRKXjEDKAmNngQ4+grStGnUyJtPB3JG4+eEdOzlJNWbw9XJG08vSIJWlAQc81+Sas1gSvKK00YDgtaUBOz7o5dJV+83VyOX/PIQAJLQppKAjd55K0lT7x9XJXnPh7cEkiS0bRagHPb9J0laNe89t2okn5s3dxwgglZOAmDiCfOeIEmt5r3jpkqSz/z29GkAJKO1kwiASXO/evsASWpV85FyU1WS1Hu+e9xUACIJ7Z5EAOTtXzXvzhUc6lpVzd07c3dTreocOnDfr96w8ygAIgkRTCIAMGqrEz/9j/uWs0N3G9adHa548N9fOHW7MQAgkhDILIKhYzc+8NyP/eTftz/+wjJlh7b8xSfu+N+8T15w6KbjMVQkJ4Qz5VIEw6cJm+68z4xZZ5x99tlnnzV75n67bDYpY/gsJSc0KABWUDgg3iQAADB1AJ0BKsAAwAA+PRiKQyIhoRaqrsAgA8S2BttMQAMb5nn7p+SvZ+Zo7P/YP2U/n/63/LRVP6p/Vf7h/fv3s/z/xm7e+lPNn5i/1P+K/H75zf5H9bfcd+hP1t+AD9M/9B/lP3j/v3xYf5n2H/2j/u+oD+m/3z/q/5v9//mS/0v7de7L+/+oF/Sv8T/4PXC9iD/Gf+D2Ef2Z/+vs5f9P9svg//bz9t/gQ/mf9y/9nsAegB6iH8A7Iv+39tH+B/G/0H/FvoH7f/av2W/uH/s/0vxEfu3l/6b8UX2h/Ff33+1f778yvlr/eeGfxk/qfUC/F/5H/efyg/s/7efSR8r28em/7D/leoL7MfN/8n/Y/3L/x/7l+0X/Y+iH2L/4PuAfz/+lf5r8w/8h/9ehv80/13uAfzb+m/7v/A/5r9qfpU/l/+7/nf9Z/5P9f7aPzf/D/9T/L/6b5B/5R/R/9r/ef8r/4f8z/9vrh9ln7Vey1+v//SdDM/3U9Zo4kGEzgfvDumlLIb1mcEC/Hmg0oTR7NAq47JXmo299BPbCwof149X9mrUZys5d5d+oq1uhGKFZQTgibtjOtyTgMj1punWGgPsDu8JPaNT/v5TJcZAeL3id1fTAEyey26n4JUlYb9Sc6dZY9EGagckUUNpjVcNbMBZReas0jRZ6RfcQK8/QxXdQoqD4TzBz5fb75bUsD22eyABfuTX/HMF5G7dPSR/Wwi21b7fhYiNR3hFSBGxNbQUTlBxWDFJc/3k78u67fkIFMfSXMEx1QzZccN1I9qsH9ktIuvcVQz4nhLN3oZbaqVa9C30GcwVaoOOvOtUnrAtCqMc1jYsEMMSpvbaxdAoML9cQM9iPQtfu5LyJpFeW3/vx6HShBlVvmDIaejsxgtMdawarvJwxTBLCP4yX1MdU6klAJv70kmwqQGD8IvQx6gq9/RbGC+uGIdC60yaWMCXKYCdVKBAWAFY7c2sioaBuwDWYc4iv/sKx7i7XTs4LjBkcKHnD4QGKsQqqt7WOz4J6xiakOh3tbfoEQKwBxkqN/RYqzC7/HGeEcw8oOqZyBu/Ih4dq4+wEwuWxXblFN7E3J+eoKIE5xOpOuL0BTzvpzUYhClqjDD/UE80odV4j8qh5+vemncy/Wbw3AMo5Lh3pStimiFRfVMbIKmV1TsFVimPG9+0PIDFRwHR91LlbUA7e+GLT9mbrxlV/UhNhc9eKv/dykLOTxljDuS8JMPkLalFlsbj02DM+zlwMVf33pZ0ri8AA/vaRomfhaSuJ5ZRFogKopDfp8xLZ4UtU/5/mxUyQXtBaq9fgKH5GjRysYRW7yPoBXOdFPX82suNqaPfDFTXVl/BOUINvtwv958x6hRfabIFn0NIGlyTPP0pvdVle+BSNXyifKHMs/cnzKL50V6oqn5AbS6EvuxfFnyUa58WVPDZcUgu13eswdGsXj8csj0b2fAiasVm4131VFoxiRxGJuBSd93JouZiea80HcDu4eNM6suXIY+uvbxTOI9XstL0mKuOgnPt1GADPMFXl6A+P6sEN6QpiVkV3DcFk1ullNPoGmTMwXkNMUsdifSBx2ulWwqp4L5rrxpckDMJuaYy5Ea5EEnPzxAMil+QJxba/v1yaXgOETc23Jh6ort5nbn8FRzuz2ZETD3xmsZBABElh888YR3ORUsl24T5Kdzj2Di9tXLvkb1Ey4EjG//q9P/mVf/9U8aQcJQ7kj7z0rUZrqxUDs1GNA/Vwb3vxT6Nih+8DY+nnpex7GifxU3RTOBxfxNzBlBCMTHG97d7n+fwEvrGHvon3D8xe4SaQsWtl19orMwZGSSucf8PFIas96ENSXqNON7O/rK57gMASnvcu/X69kFldzvMNSzQeEz7vte/8WKwJb5atQHjBNFRpHd+zUkxXmVlnlWGmn2zxEk1pHT8T70sPrdBUxBWSmwrZkC7gl7SoCi6zU5CL9NiMKc72dfu1ZQ9+t2TAMwx0IPa68//Cpz/z9DStuI7Z2CXjDMfrVJy5wGOnWPILgfMuJx8VvL0TsA99ZurjkO3/hf+EuZhzvI1eoAKSAQOgtfaMBanjuFlSgAwpSEf+ec0IOUqwLueWjfYuqCVnj6/sOKNSF4510CfXhCjpvCTaIsBvh61kkYb4g2LDD8AYFmFryCQ1j5iERXAe+rsF+RPny13/r73YIGY7pnvWys2nNghMdU+WlmAHs+/pI1eOABhMzs9dPiRd/VlvCkmwXjM3nCZqqygD9oQk7qWR9WiXs8UbQnUdhTTKHhP50VEkBVaHvtyK3pwIlZgi+65oYDYjkWECV6WWt2ROB7TLzPZOTgXu98bNwVXfsKuMfsHIDCAGlk2Aya7lLIMhpO6tdI7X4SX68JIbeo6xnb30IBiv0FoyKGOpUB98Q4W9l0tNi4mbfYn2O4sHRsg8KlHEA5bkGaTVoMTkssXJJwVX58bd+LpRgURJjudNKjNYlbO/DEnq176/lmhl+JzDxNfTxTg7TAWrKjwXWxq/uLfxiL73ElOHwdlMwvxQTYQjTAfdaNspLXfxRGzSVhWBTJM37RHqL37CsddvJJ2eRtrvr3TBh+3Pf+KqkDZ52ofzzqVRQ4q6I4CyB1lAp6zupi7QBhu7qvc84RcsHBFNojerkMYAWD0odGR/SNred90FKWOWfZRsXN1f+G9OqPzjtTsAt7gW7Km3eGiYeH/W4CJUUsukAoeIkHBE/VQqrHFarz4FbRAWPg21IXAWjTJXbmGktyZDtqGQLAuMT6JvxzB6mIhUVsdPpGaNY6UtCglhFFDcOcKCZ3PsqpynOJDt1B16XvNLdpP4GzOVWLFLc748IKglclCyJ2/1C2+ar6uQ82/npsTuoVoqIkYL118zfR8/Ns1huKdzi7jR1xtxHZ7fRIBEUEaI8D9RydP6jRYjTsHOrRloLPtqPIpdlMdyrtSx5uEgRakuAX+nl3cMU6mGQ3aD80GT2Ni/5YP4aODskop1FPB1wUIpFyDSmFKctb6sGKRVS/XY7YjmotghtZnc8iFaSsE/mz3ynR8rwOJHIYyJvKfWj5SmM5W5SaqQpuclUWmt2JbPvvDOCU1vjI8L4mmKXs6hKCugms7Q1GJWAsa10Jr7hQ9SbEX4LXZy4ENiQ4SqhDfL6KI1Ta3B/XpeX17swvzpSAZx9wYauQmVGfF0bJjTDtGLM0aAKZspn8E+Bz34Sz59L0PQay822PBeO3CbXAD3xLIoxDpMdkEy862eoeMSTv/5IVhK06j4jbe3XgY/Ow1XSl5vuOGWkKGPnWgLq/9ykowAYlzdPSihDH4rOSoPI8VoG9YG7HbzKaE/NIuswc2i2QnMv2ysQdv8nwzOANYcCnuPBUIYqWg/T1p2ufF5WdcEDdlinNcJHNGvu3fsCbLJZrSfe2P2ZlWbE93qjA7t/9bVv2wJx4ODvjr6+T5eoVjbvpjeKc9VbTebwRd/LCPuATyrzghlEi/1+v65IP+hEM+7GDu4mMRkXIocbfMd4iKWNCyxMjygwyKQhlEBgl8Q33chQaV/FCMAv/WAbpSmulX1DKDBIfknBxxaHWNLig23Ts3I4uhgS+kzF+v82dpuTLW4kzmcfA4qD8iGWmB+fPvunEiPMnQ3WR2nl1r3a/a/0OEoAbRHUQ4Xgj82/KXFVSQKV36mTfsKcg6UDx3cjjMWrat4l9WVL4k2IWUWx1uxeYLzti/60tGrznfER2lXQxflJyQf0YrCRNAt9FDBBkVl+zw5uPEOvR9IRjEBC0nQ6NJoH3HBI04yaE8SY/chZccWFLoShTSr7/YlNZRRl2dtIt6FFzj4Yx7CMGo6VD/+Da4J4Wf8mzZhx+PWYUE0YFr7OuVmXXtfn9tBHxT8wz+MArxk/pI6aWU5kPIHgJ2Jt2aH8n8Sdtn+SEsbCYvb7L0IrhYGlVRqsT4DY1qf7GZ2Gm2g0KAZf8f/5hQ7zQzPH8IrAMXg0G/9Kk9/zJF8MdcAnGmJgz6172XhFroI1FymliUCFBKenLZWdpF2Za7emN/4XVlzmy6sR1tItGpnD3BeIsPt+7JUN8sjgmkpX+hfqPCE1PzxfkLBcV6WxHTe52wKkiqAgz7ivimmhgtsV3/Qq4JEKCHSoTH/A44xu12ovfY2Hpily/a48L2W8qlpVm4hU0Ep2OsRDvVWzojMep73hOtGFeljieropjRkyn9XjX4BBsZ7Tkfw+dFFGFvSiAeruZ2u40sVd3lntG8ZVBEmy5qBuuM6gw64T7xxgyuYMPn2M+klzYs8P3Ft9q3Az6YPHL8Wwfy64dr9GZ4RPlFjrg9IFYqDpFc68nniPkIBT6W87Z4X/X+9/pqAjgHw/rBxetDWNwleyIFEniUkZx8lxTg4ZvrRc6qnI4PdzDVfcsMmfP7HNTLmk89a0VbuGyV+C7zW2ITrq5lb3jZUA4sCzoi36t3Cn9bJyZApObE/dDmirpxVa6hRIdMDQlzFaQ7QexS0336eqHrr6w0F65tJZ3gzDNldfyw9Nh7kb5rfSICf/qf3bYqfWOD0VxkKdiHtLKwmptkkow7VUgKxxdAJx5a2bjbFlZpmsrhvlJPq2vFUE6mnlr8f7nrSmyPZmb9SihRTaBfzrNl+0IW1xeWak1D2bC3IpsOqLm9YdWe4ebEyK2Z3O5CwOqE0lO8Tw+5Nm1W0iFIFbSJ/Tt7p6CMgvTzrklsn3IHBkUWGuDxIhujNzB9z2UwPaBIKTT0QLRvvikZ3OSzgp2Rer8YODaFrG2lL7YnNpR6J4GfbIl51Xc3Tne4Uv062ECZvYkYP7hCYMY3hK5bDYP9R9t+rzJl6WkZjwMD6fchuXNoMxik7k81QPALI4QIx1vTson64LIF9t8L7fCYCVmSA9jHVg5rXkG46w6AbvwNE/88T8ZIcx8TSv2osjdgObKA5u8ffASaLLU9Mu6jXnQAlYjJ/EAM/uKtbFpFcsQzfjdTGtl1Qnv7Q2jaRa4ZX28/sWvrdRQoRAcdJqPycXhLsNontefEVadFPDsAbsbxj/7mwUbdg9/1M6NS9LogI/FS69ZvV/mZ2fa5+isn/vI+mM9eE1EV03bBfrpKJuqkCdzTaO7r85xssKkzqygPLzCah6alVTDObzm4qQ7POMZXR+C03kr1hFfGqkbBiyzSyD3ruoF8ifECOQmgl/Hitp3nG+v1849SMa5fZUhuH2ziMt2RBuE5ajsW/jHBLke3i6MIZtp6nQo0X59DwZKiT9rQ/hcp74TGKddtGDxdmk77TT5/nCvHEzklpnY0pxk94TxB6pqdA1M4ECM1QAo3bP3ghj+8pqaNDYV6TjfRdflzvDUrAgqAuR8flj+zY/C1ELlpXac3BNcQdlWnCX29G+IcKJ28QtZrge0NDxVN2oO0RYMuXxIl/2OmZYSbSWjD3SNro2NAkt1NPHpQQTOfVD50+TeuV5yWQg5gAim2gR/ZSY2estHuq3zA2OCnznpCKixtnegTxnDovYs8AkGmhOAOYxXgq2Bk04xrvN7Qopd5tcV0H5gDHVWJtUrbbhcWpiXwuoDQS5jLmkRF2eo04i/EClf34WB9XYLrtHnWgjyoIg2ZP4EH2DWunx49v2CCKlyal9BZTEe2dr3PR0GNXZ6Hcllo2MTsMiKN5gSOF+DWXjy33LF/i89FVv+wnaPyqWNgf8EOhzgX18hHXpZBMu3jH5lbYUJQRw0T9prA6wRcciYErLvkLTz0HF4aXBbFwNCfM8NH2UjNxaXHYHVMMFx9zssvKDbEd6xFWftl3lBblu7KD8GetuSSGK9AWEuscTtcqyRoInrx5D/PfBGpTnBuwvBl9xbub5vnJZ6BTrvV3jNkGu4E9jHL3McDIZDM/paaqaRl3JtO63HOt2/kpD1d2iqXc17FtBlOodRRxqrTwq8XZ65Imz2zs3Sc31hBaXDIFA5PCYUz5Y9zvi6+qYzM1B0RbXIrmP0I24cgx0a8dQROmn1V3HpWvXtwOtOJbLq2LJ3MqSdd7LveLdvGdJlBKJeUOfv3DY9ZUv4jgWSCi1VJ7NyZJ/XLjHJEJRz7Rk+Wld2cL2VMrTD47pMicq/Q1HrFeq1UM+FyyoJnWcfiZrMRQQ9yQwQLmP8sUBLuPG91N+HVhj9KFmBw0XuqJLE3T3huefWFXj4QiZgkAqwm1lltN6qkGpN6ZJR9TT66l2oy9QPEqtwPmcpKa5nDi4APJwUZI7RtfqqB8NtIfiGGmrysDnDDTRT52up5QdrgdxCGjRdFke2nmhxPHvW41zFTUsemw8I57U3VPUnAn7Wb+ijlxBxnWQpxUABp4+DkqrXr6PJgsnfRCcvb6iUmjnGKP4M/2CL3itT+gMCcdSZsTa/kyxcPbOYQgX3rx6rW9/PXHO9ym4L+b3ees2xDmTCZFHPdsRIwfgnXCr6Z1CSoOfX8tld3qL3lqVCllvxA6b/yVqcFdKzohC/gaVG/LBmF/4k+ipeVacvspWow1SK4lhUzzBqBdjW2lmxl6umHKlT1NWicZUd2bXbWE/acnrAIYgsREt3IUI6uMAxzQ5jxw3/9oxTwhQZNqLbJ3805hIZvoatkWKdTzAKBkCq7khls/Y43ClMaPdWQ2mdL0Hf57GcRUhY373L5RU3SadQejDeRsdpH0vb+GvT3nnre1XrQYCtKLf3AyblnFyk0tGasCOZNR9JNyicN0BHz4EKM/pCbQ0FdKs7Ec5V6hgS8Awk211dkKyYHJ8saB0ELUIky9uhrksMwOJXfjNcJPDqUM04h+ssToNimyMbO5xProJg1C17cKrsRM2gxQwJz6ev2VvaWB9tKJbxToNcIUTMeZoKEmAWhX88Vvn98Pay9aGkJHtaJC+wDYAFrCfmNEJQJG/RjhWyWEk20mCUba8VpGho4yt2o7GqBw1NVI1xabbZsIszoQlh8Tloy0+GS04U+zjRJX9iTpfpNE0/ie+Pteb8OTlgrgY6C0kb9K5I7C7rHwEBMOB8wjtUIviTEYE2fnt91cb3Zslox2wH/gyWencof4EVg0CrfnU7n6Sg7N1gp7LS+08FmPZcYGgF2QwYaRZH4wSehqngqq5Mkz/J+9BdsURR+jg8rdjuMdgiDMMXn4XZQlugm0DcChHD4o/FEYFbltax4pavZsHgGAj6J2x04o38phwC4IV8FwskiEMyT4U537zTk/d45GrjrLeepEAUyrf8Hgt+URRQiEe5mKBszME0s1LKwF+wn79LUN6fQEQzmrXiEkS3w4lpLW286oOU2besVpedKa+K9aNOekU0oWW222n+mXk82yhFstqvhkAxFzBkS2nKEDpsBHwQ9IwZZERsw7oX8ajtrcge5704Kc7dyfGYDnh8qHgFi4Vrj9phEEdWWwQqzmEwluT3VvuIReZPeNNWgZMnlu6gbtgddqHHfjWWE3RBaLbm1UztgCVTgn2brcXB6Tpol+Lt7HLUF+B3u7JBB7TvBevGiwydsXAudVto1DsM8c1kuLJocXy9NH1JNncVgY+OlqwqUa55K1VX2dnu3ZtSyZt5T5sX7xvfmViI5c0OAWnN0lXVO3DDbSRMxgqZL5bQn51jQWrnMNhSfkGSuQWV3F8z54CqLjOD3Wp7w4HOhn44emdx7OkPMWMAj7QYHEUCKK6oDOvsD5NWMul9ukhMlH9sYdAiltAsWkuUjOmVGa4TDC5Ed5pOodWk15is8lC0X66CmCNQvqIocpa4iUb9coZ9T1OfT/76DYSCUezmu5/sSqoX5tCDll2cAe+86PM/OlatlS+rqD+S2xfYuzuROifHhZCWLFBoQP+PCOythQL5ooPAVs1Au5h/Q2kfksjJR/gpikgS98uRR+0gij46qjpaaA3jzyNLnhYBgmFA5ncRJGb2pgL+ausZ3MwCUbQPSWzjc3BuRYwxv/zvCNF2nikF/5Zq+/gNkVf6NGhGATqhjPqewqYKc9BrymWidf/5xAqrTq1tePSpau1tILz3/oxcQHxjqblEIUh4cnwosMz7lBPrt3XWaXIIyjpEJ0a1eJKyMToxcF4B3T/QVhDpyGvT2LajDim6dTrfGRxq+wkcrQIeVXXuFiMbwffVXGwH+XxoGJ3r67xXeYMv4/HPWqm+PNbP3dl3CrugWtbj9ckjsiPWpo2BL0vZuDHcUJ1BRTjajf4Tn/4wNp9p3jV2OJGSPJ5j2XpllVKZkGlmrR2mw4uE5Mxt3Vd7BcytR++j/3E9GFFRhxLayXwrcpAKva5XcJUytJzR2JOdj778BZtsgVeJrzbH5Og/szzFKa5iXSTHy8f96dbIcUIJsMfjb/WEh4wXPSAbj3ICwIH3jGQUN0+vuSBWsBYHP8nIXVhAAgfSP6V3imTUhZEK6eay4Vb7k6AfyvgDe20S2mU+2cLoxtmnZkyVBJPKgh72lJv4vhdIzMH1dCSU+L3cLhuOnPnTp1Fla/C1Q2o9hkzFQwQGlvGkYUOLfvkmHGQ9+JRj1IBKrMDH5FM6sSB0XG0TgWBehVJb9Q0lbimzIQ1ZtygkRZlYAvIOkYi8hgVqtFdZbxZ3PlolFkiQZ7H2wUKmAiSMwDf3F61V0d/uJOTuRZfkvFJQ1jg86QkPbvQSXu0XRtDDLuhIuqiSt1wfw4uAk6vFS4Tm6RZ1QL9+kf4fOFQr36YfL18jEjZiKqr5raO5P/aGdUwUTSzWsi8Jtjn3PL9u40qxlK9G4LHfD3JGmMt+NbVzQY3HJ1rtD3kgX9Nvx2+xh6gVdW8E9xTm6M9n5An53FcRUv0EnWIe9NgKSizkC5X0swJqhcdkB18+Q24bpptivoVHErOQqNgRYoZq9ltacpBLol9s3fKf/gN22kZrGzQvNV+4wavzz/MX+6HTeG5zGrJrCK/vD0aeSNNwjEfo7dDnbcZHxTSfiwlUlYb8W/5UXBZ/XpAdTil78sq+Wldwoe7RP5vis8vM6jQ3JyjErpfXbveTwhZ3k2DANtkos/2qufzoYQKJY+RWWOc0e8BRFg5X8ToKgrJ+TsZIOM165jifl6Z+8yMrSFBJMpkS0b/KfTj7FkrzCx1brzJGe+zny0f+B0xICtU8j43lAPemXtY065LFAttMgvHXH9F9RwpHNls2dAV5gSqnF/YzNjKLbBCb5R+Uy5U6GuXmEWl6fg9P8lGmU4wSKSYFEU/uWomBr2RvYJ/6rSi88OG399cDENwo90+b1PDMHivSKNlx1WGYhCkoFVWMSHyZIM5Fdd9IrVZFnapW8CvO6zwNuJC7YwD+UYx1t6OG5HvCvXTIxbU7LnFyQooN/2U74B7E2Kbmu5lpfvv07EDr80O5cIcQbmX4IMT8jRxqdIsDy04qJEYNPGeG0l2+bcuFVzJ5mEgtUKW7cGays5AUDvCwDCi4os9lPaNp5HNSXChUjAM86zw3CBEWwebJHLaUDeWRdF+UQvAEeXX6QLnTfos15StsXPWem34nrYTcgo4BKBXvH8ZYiRaJmgurH5XNu5UzpaDym7pSXcHF+HBbcwzVMG6fjnCxW4rcn5CGzev9zdtPDLrjX0OgpxvVaU8+cq7mwWPo6x6ieBfdYn83TaAQUj5KAy8nKICqlLG9sQVd788a0ffCxc15JYz3+gU4+ZZ/DVmpF2DS673o5SBOkeM5HPSQjd475KU5w1337y+fQ7NRq7/SrKkav/RiUOiHsqOGej/JsO0brA10E2mUHSrOn/a7ttlmyTXy5jp2+izaEbdF94vwkTndHL7ebTf44ZuFPJ6vCNCkDhpJdVh7AkaLk7X2llWo6AniSUAHxdJ7s+OptPZRRT6aAiXE0JOnyhZFiT8SnkEoQrGypU9FQQ0vBos02kuK2jPbHZw/HXvDJfMHseYWbOfTXi4LV/H5SF/GakYXVsBK4pldrtK/KQhKi87eKWfhw3yeCIVGDvQokL/C0Yjg2PpYi+QyLUpuPZghryt49GvB9aA0AxxVy/RiVZQImV9iIAKyzm7bPO8yz+zch+fp8SXGHenlfH23q5pQWk4wFBlknMroASopn4ubM9TCh3GvO0baDtVXVkkmNlaf2xJWW5DLTmBrRSxp/NbnFik3iIn5Vdim9e22k9zFTSuFa5d0Mk26dV/D/k2PTl16lczQaDFVyDJSgRndY9coFHBv+lV+NJW8Pnfqigu9nqjXnzuvhRsiwFBWU5OOMntomQuJJnUWdrZ74C+LmKEkLy9w+S+2p0qVKOXz9rYQWvAvT8THhx57mP4G6Ny+14vPrtIlC+0vPKLKiv/1hZiN/OPE9mskV/zG8F3gseGURMovmYq2TC+xzhDpHzbOY2d3eXtc1+43Ku9VAng/zPAiWh7HRIU/J3VKq1VgCMJTpOmY2/crxRht7umaOA5rvbVOFMeKODzd1kxkWbaw3rsGwYg6LpMFP64ilGyc3J4lqeFXyK5JIj+ufkNtkULBNe1/YZUoKVENp5Y/im/6yf/8VtQtzZELzSXY4TrZ9CwkC4hswupW+TH2HHSyowx8VrF/YG+3iHkOXj2PTpiBmsU8lxxLsMMLD32uzKqfxAIu6IagZNrR5YuyzhIUKNq1j92ZGyLpIMzv+nglfvj3fPCVc6CwRRxZgDxhoZWzKkJJjz91C+hx9VcnfGyQnSM4HBcWDq+Ftbvcs/dzEgAXu13DOHR5+YZSjfbO5Xlc9G5v3JUz2Uo1fkTYVOtQy39qabha7vRtvFQjntgLFn5QeTH8zv/J0fR/OgR2RmLu/+qgegKdSj99Gtp1fk79QZw4lTvCs0W7s3D9LFy3EDLJaggRCY/HEYiPjpq0LPkFBIfP9Oz+H0n29LB/pOTyPJI47+F8NT257A7qFTSwXNmdPr8m8gmjN6b7n4v+TrkstSYvKBlL6pQ10znenoIYTpNMSajjnZENl06B/p8OdhkiqDIwAlOL9OiI1oLPgrcGz88ZcawUO6nN8RD8jzcHELvEjINCu6JY6//D4e+UiEm2EVGrJjxjnEvVOk6FEpg+BlpfbQob18TLnghFGW3kTH/OGUhStL4wHbb9abUTIVAz/Jk2l/t666zs3vq0Owq2MB2jfJgILPqP0xOba9BPmGlTMG8ORzJPtMwYNApyhTsb4EnS0xGfhMk8JmYu3u+xTDHDHgjcd+IMX4ICIfTfM/3Yfpd7TKOyXZ4rvGFp+Hifz8uQMRPtDQv8ePtXeXAePTqM2NexYG4DKdupP4uN/3YuHytG8xKXIIbThcgDZIcukLZ2FczCx0aCd7aVaP0gFFIIsYsjJnv5ZK6232CL1Yq74D43g68pF2S2RBSVPArtNdFVHU8xx7ns/b5KXmR3335owWVf+zTmm+w/bbQpQQH8IW9AFMO+WemKfhFJwiDBL+iPvgTLnU/rnzUKZRVxcnidXjfCn2n4YsQNAjLIxuHOFa8dAAT/tHyCM5NCGxmc8hpERI91ueu2zSSJV9VQdxE3bxHEmQFhD/7mtQTfHqLg7W/WZey9UzYKJnaZlFU7lsUQmg7nsZPcOnJ8rnBSe0LrPmv7DzEcq6N0AVaviJVjVLps3effzbngIPdwqnbYhrkfK+tUGfqeGM7G5XgaI7zPngWb5LhBLuGKOEyFIc4puShPCdQYZYfxaz8tuSfiHCFzhT6EKMx1p7tH5q4jLC1JqFZbuAaeT53AflvmRIORRs0pzSwv/IH+lArcQFA1ZPW6iiKQ4CPHNMxNprddmsUz4xAkfWaUlvz37nz05ae9yF9zzymQhwxmvK3H2JNUfps7AnEL1tfNGd63cN9lB5Oej9r8ryutqvK2IZZSEjSt9FePwsb6czE7DEhJeVHc60tZKvYEA+JblYQ8HjKQVuagDfXB76INZQwXZdZ0XxCcSj+w9UK9ehgawDwQW06rIG7vjy4oUKDKoIOoh2nAgi0XPP12X0NUVJYQPpIn+Buk1FIUKZKcQsgnqyc9qNlObPpsf2anowz1k7/cwgFeQT/gQM9pil+sJZrAiCnCi3ODVxkDusmGXjFroyB3FV0XC0A6iA954d871+pH6ORr682uAsTBOcN4k0e5mVgNkn6pio2yJpbenlMWf/y45IypK/tTCq0xIWe13RnT6QBFbM4436iiN5cTP0wTgAAAjsRYCvL7vyxV2FmeJeBgg/yKTbFCOgxz3B6L2kKxSpzN/oYiQl4kWPSNuhXWC+5DlfHsqnS3Y1MIYdp1xD8WqvUuPS4wX0l1kyX6LzgcB6bxVSOyZfGZ7DHI7LOlmz/wLH5kNtOBkkcVrD2whXWtdx4073EIPr9Ct/yaTT//UbpPvnYg7r77BALvIlFFGkHac+go+ifxpEZnnLQCGw7NRnEHBZRl+qTNqK68OR07eOUG9eyKBltJMGDNqTxP2y+F0vjqBcCJi7icFr9sNysyvgTM6RA4q0YDOR6ACz8yXSbovYziMQCcb+Wk0V/fY7+Gjvj2XXAGACXQGcYCeLies/1Fcf+TSAT4RYiaSrRzd45u0wLG3nSxkthyDVJnTgU4Hi6wHmSLOhYQQAOIcm1q7w9IeR2J9afdMQvbWPem931cV/YX12tnj9LC1uhAEWHhCm6VDYpQ91Re8rpELJjajjfdMAvCpgJCcGdT25FQ9KrQNV3EkOVFeQt1KHvXxDJjJwhYXtCnKs79yzHeBnIhZYLN/ACkAAAA==) center/cover;box-shadow:0 0 0 2px rgba(255,255,255,.06),0 6px 16px -6px rgba(0,0,0,.6)}
+.brand b{font:900 23px Fraunces,serif;display:block;line-height:1}
+.brand small{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.links{display:flex;gap:28px;font-weight:700;font-size:15px}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+.cart-btn{position:relative}
+.cart-btn .n{position:absolute;top:-6px;right:-6px;min-width:22px;height:22px;border-radius:11px;background:var(--chili);color:#fff;font:800 12px Manrope;display:grid;place-items:center;padding:0 6px;transform:scale(0);transition:transform .2s}
+.cart-btn .n.on{transform:scale(1)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(700px 500px at 75% 55%,rgba(255,138,42,.28),transparent 70%),
+  radial-gradient(500px 400px at 20% 10%,rgba(226,65,43,.18),transparent 70%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding-top:56px;padding-bottom:70px}
+.live{display:inline-flex;align-items:center;gap:10px;background:rgba(76,194,122,.12);color:#9fe6b9;border:1px solid rgba(76,194,122,.3);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:800}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 rgba(76,194,122,.7);animation:ping 1.8s infinite}
+.live.closed{background:rgba(255,201,74,.1);color:var(--butter);border-color:rgba(255,201,74,.3)}
+.live.closed i{background:var(--butter);animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(76,194,122,0)}100%{box-shadow:0 0 0 0 rgba(76,194,122,0)}}
+.hero h1{font-size:clamp(46px,6.6vw,92px);font-weight:900;margin:20px 0 18px}
+.hero h1 em{font-style:italic;font-weight:700;background:linear-gradient(120deg,var(--butter),var(--saffron) 60%,var(--chili));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hindi{font-family:"Tiro Devanagari Hindi",serif;color:var(--muted);font-size:20px;margin:0 0 8px}
+.lead{font-size:18.5px;color:var(--muted);max-width:520px;margin:0 0 30px}
+.lead b{color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;color:var(--muted);font-size:14px}
+.proof span{display:flex;align-items:center;gap:8px}
+.proof b{color:var(--ink);font:700 20px Fraunces,serif}
+.proof svg{width:17px;height:17px;fill:var(--butter)}
+
+.dish-hero{position:relative;justify-self:center;width:min(560px,100%);aspect-ratio:1}
+.dish-hero .plate{position:absolute;inset:8%;filter:drop-shadow(0 40px 50px rgba(0,0,0,.6))}
+.steam{position:absolute;left:50%;top:0;width:60%;height:55%;transform:translateX(-50%);pointer-events:none}
+.steam path{fill:none;stroke:rgba(255,244,227,.55);stroke-width:5;stroke-linecap:round;filter:blur(2.5px);animation:rise 4.5s ease-in infinite;opacity:0}
+.steam path:nth-child(2){animation-delay:1.4s}.steam path:nth-child(3){animation-delay:2.8s}
+@keyframes rise{0%{transform:translateY(40px) scaleY(.8);opacity:0}25%{opacity:.85}100%{transform:translateY(-40px) scaleY(1.15);opacity:0}}
+.butter-drip{transform-origin:center;animation:melt 6s ease-in-out infinite}
+@keyframes melt{0%,100%{transform:scale(1)}50%{transform:scale(1.06,1.12)}}
+.tag-float{position:absolute;background:var(--cream);color:#2a1208;border-radius:18px;padding:12px 16px;box-shadow:0 24px 40px -16px rgba(0,0,0,.7);display:flex;gap:12px;align-items:center;z-index:2}
+.tag-float b{display:block;font:700 17px Fraunces,serif;line-height:1.1}
+.tag-float small{font-size:12.5px;color:#7a5a45;font-weight:700}
+.tag-float .pr{font:900 22px Fraunces,serif;color:#c2410c}
+.tf1{right:0;top:12%}
+.tf2{left:-2%;bottom:12%}
+@media (prefers-reduced-motion:reduce){.steam path,.butter-drip,.live i{animation:none}.steam path{opacity:.4}}
+
+/* craving now */
+.now{margin-top:-10px;position:relative;z-index:2}
+.now-card{background:linear-gradient(135deg,#3a1d10,#2a1610);border:1px solid var(--line);border-radius:32px;padding:30px;display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:center}
+.now-card h2{font-size:clamp(28px,3.4vw,40px);margin:8px 0 6px}
+.now-card p{margin:0;color:var(--muted)}
+.now-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.mini{background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:20px;padding:14px;display:grid;gap:6px;cursor:pointer;text-align:left;color:var(--ink);transition:transform .15s,border-color .15s}
+.mini:hover{transform:translateY(-3px);border-color:var(--saffron)}
+.mini svg{width:46px;height:46px}
+.mini b{font:700 16px Fraunces,serif;line-height:1.15}
+.mini span{display:flex;justify-content:space-between;align-items:center;font-weight:800}
+.mini span em{font-style:normal;font-size:12px;color:var(--butter)}
+
+section{padding:90px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:30px}
+.sec-head h2{font-size:clamp(36px,4.8vw,60px);margin-top:10px;font-weight:900}
+.sec-head h2 em{font-style:italic;font-weight:700;color:var(--butter)}
+.sec-head p{color:var(--muted);max-width:430px;margin:0;font-size:16.5px}
+
+/* specials */
+.specials{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.sp{background:var(--card);border:1px solid var(--line);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.sp:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:var(--glow)}
+.sp .art{aspect-ratio:1.25;display:grid;place-items:center;background:radial-gradient(circle at 50% 60%,var(--glowc,rgba(255,138,42,.35)),transparent 70%),var(--card-2);position:relative}
+.sp .art svg{width:62%;height:auto;filter:drop-shadow(0 18px 22px rgba(0,0,0,.55));transition:transform .4s}
+.sp:hover .art svg{transform:scale(1.08) rotate(-4deg)}
+.badge{position:absolute;left:14px;top:14px;background:var(--chili);color:#fff;font:800 11px Manrope;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.badge.gold{background:var(--butter);color:#2a1208}
+.sp .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sp h3{font-size:22px}
+.sp p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
+.sp .row{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.price{font:900 22px Fraunces,serif;color:var(--cream)}
+
+/* menu */
+.menu-tools{position:sticky;top:68px;z-index:30;background:rgba(22,12,8,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:12px 0;margin-bottom:10px;border-bottom:1px solid var(--line)}
+.search{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.search label{flex:1;position:relative}
+.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--dim)}
+.search input{width:100%;padding:13px 16px 13px 46px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 15px Manrope}
+.search input:focus{outline:none;border-color:var(--saffron)}
+.moods{display:flex;gap:8px;flex:none}
+.mood{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:10px 14px;font:800 13px Manrope;cursor:pointer;white-space:nowrap}
+.mood[aria-pressed="true"]{background:var(--butter);color:#2a1208;border-color:var(--butter)}
+.cats{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.cats::-webkit-scrollbar{display:none}
+.cat{flex:none;display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:6px 14px 6px 7px;font:700 13.5px Manrope;cursor:pointer;text-decoration:none;white-space:nowrap}
+.cat svg{width:24px;height:24px}
+.cat.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.group{padding-top:30px}
+.group h3{font-size:30px;display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.group h3 svg{width:44px;height:44px}
+.group .sub{color:var(--dim);font-size:13.5px;margin:0 0 16px 56px}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr));gap:10px}
+.it{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 14px 14px 18px;transition:border-color .15s}
+.it:hover{border-color:#5a3826}
+.it.in{border-color:rgba(255,201,74,.55);background:linear-gradient(90deg,rgba(255,201,74,.07),var(--card))}
+.it .nm{display:grid;gap:3px;min-width:0}
+.it .nm b{font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:8px}
+.it .nm small{color:var(--dim);font-size:12.5px;font-weight:700}
+.hot{font-size:11px;font-weight:800;color:var(--butter);background:rgba(255,201,74,.12);padding:2px 8px;border-radius:999px;white-space:nowrap}
+.opts{display:flex;gap:6px;flex:none;flex-wrap:wrap;justify-content:flex-end;max-width:62%}
+.opt{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--saffron);background:transparent;color:var(--cream);border-radius:999px;padding:7px 12px;font:800 13.5px Manrope;cursor:pointer;white-space:nowrap;transition:background .15s}
+.opt:hover{background:rgba(255,138,42,.15)}
+.opt small{font-size:10.5px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.opt .q{background:var(--butter);color:#2a1208;border-radius:999px;min-width:20px;height:20px;display:none;place-items:center;font-size:11.5px;padding:0 5px}
+.opt.has{background:var(--saffron);color:#2a1208;border-color:var(--saffron)}
+.opt.has small{color:#4a230c}
+.opt.has .q{display:grid}
+.empty{padding:40px;text-align:center;color:var(--muted);display:none}
+.fine{color:var(--dim);font-size:13px;margin-top:24px}
+
+/* cart drawer */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;visibility:hidden;transition:.25s;z-index:60}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--bg-2);border-left:1px solid var(--line);z-index:61;transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.open .scrim{opacity:1;visibility:visible}
+.open .drawer{transform:none}
+.drawer header{position:static;background:none;border-bottom:1px solid var(--line);padding:20px 22px;display:flex;justify-content:space-between;align-items:center}
+.drawer h3{font-size:26px}
+.x{background:var(--card);border:1px solid var(--line);color:var(--ink);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px}
+.lines{flex:1;overflow:auto;padding:12px 22px;display:grid;align-content:start;gap:10px}
+.ln{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;padding:12px 0;border-bottom:1px dashed var(--line)}
+.ln b{font-weight:700;font-size:15px}
+.ln small{color:var(--dim);font-weight:700;font-size:12.5px}
+.step{display:flex;align-items:center;gap:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;grid-row:span 2}
+.step button{width:34px;height:34px;border:0;background:var(--card);color:var(--ink);font:800 18px Manrope;cursor:pointer}
+.step span{min-width:30px;text-align:center;font-weight:800}
+.upsell{margin:6px 0 0;padding:14px;border-radius:18px;background:rgba(255,201,74,.08);border:1px dashed rgba(255,201,74,.35)}
+.upsell p{margin:0 0 10px;font-weight:800;font-size:14px;color:var(--butter)}
+.upsell .opts{flex-wrap:wrap}
+.checkout{border-top:1px solid var(--line);padding:18px 22px calc(18px + env(safe-area-inset-bottom));display:grid;gap:12px;background:var(--bg)}
+.tot{display:flex;justify-content:space-between;align-items:baseline}
+.tot b{font:900 30px Fraunces,serif}
+.tot small{color:var(--dim)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--card);padding:5px;border-radius:999px}
+.seg button{border:0;background:transparent;color:var(--muted);padding:9px;border-radius:999px;font:800 14px Manrope;cursor:pointer}
+.seg button.on{background:var(--ink);color:var(--bg)}
+select,input,textarea{font:600 15px Manrope;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);width:100%}
+select:focus,input:focus,textarea:focus{outline:none;border-color:var(--saffron)}
+.empty-cart{padding:40px 0;text-align:center;color:var(--muted)}
+
+/* floating cart bar */
+.bar{position:fixed;left:50%;bottom:20px;transform:translate(-50%,170%);transition:transform .35s cubic-bezier(.2,.9,.3,1.25),opacity .2s,visibility .2s;z-index:50;width:min(560px,calc(100% - 28px));background:linear-gradient(135deg,var(--butter),var(--saffron));color:#2a1208;border-radius:999px;padding:8px 8px 8px 22px;display:flex;align-items:center;gap:12px;box-shadow:0 24px 50px -14px rgba(255,138,42,.7);cursor:pointer;border:0;font:inherit;text-align:left}
+.bar{visibility:hidden;opacity:0}
+.bar.show{transform:translate(-50%,0);visibility:visible;opacity:1}
+.bar .t{flex:1;font-weight:800;font-size:14.5px;line-height:1.25}
+.bar .t small{display:block;font-weight:700;opacity:.75;font-size:12px}
+.bar .go{background:#2a1208;color:var(--cream);border-radius:999px;padding:12px 18px;font-weight:800;font-size:14px;display:flex;gap:8px;align-items:center}
+.bar.bump{animation:bump .35s}
+@keyframes bump{40%{transform:translate(-50%,0) scale(1.05)}}
+
+/* cakes */
+.cakes{background:linear-gradient(135deg,#3b1520,#2a1016);border:1px solid #4a2230;border-radius:36px;display:grid;grid-template-columns:.85fr 1.15fr;overflow:hidden}
+.cakes .art{display:grid;place-items:center;padding:40px;background:radial-gradient(circle at 50% 60%,rgba(255,170,190,.25),transparent 65%)}
+.cakes .art svg{width:min(320px,100%);height:auto;filter:drop-shadow(0 26px 30px rgba(0,0,0,.5))}
+.cakes .body{padding:50px 50px 50px 0}
+.cakes h2{font-size:clamp(32px,4vw,50px);font-weight:900;margin:10px 0 10px}
+.cakes p{color:#d9b3bd;margin:0 0 22px}
+.cakes .eyebrow{color:#ffb3c4}
+.flav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.flav button{border:1px solid #5a2a3a;background:rgba(0,0,0,.2);color:#f7d9e0;border-radius:999px;padding:8px 14px;font:700 13.5px Manrope;cursor:pointer}
+.flav button.on{background:#ffb3c4;color:#3b1520;border-color:#ffb3c4}
+form{display:grid;gap:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{font-size:12.5px;font-weight:800;display:grid;gap:6px;color:var(--muted)}
+.cakes select,.cakes input{background:rgba(0,0,0,.25);border-color:#5a2a3a}
+
+/* catering */
+.cater{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
+.cater .card{background:var(--card);border:1px solid var(--line);border-radius:32px;padding:40px}
+.cater h2{font-size:clamp(30px,3.6vw,44px);font-weight:900;margin:10px 0 12px}
+.cater p{color:var(--muted);margin:0 0 20px}
+
+/* outlets */
+.outlets{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ol{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.ol h3{font-size:22px}
+.ol p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
+.ol .ph a{font-weight:800;text-decoration:none;color:var(--ink)}
+.ol .acts{display:flex;gap:8px}
+
+.score{display:flex;align-items:center;gap:28px;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:32px;padding:36px 40px}
+.score .big{font:900 88px/1 Fraunces,serif;background:linear-gradient(120deg,var(--butter),var(--saffron));-webkit-background-clip:text;background-clip:text;color:transparent}
+.score .mid{flex:1;min-width:240px}
+.score h3{font-size:28px;margin:6px 0}
+.score p{margin:0;color:var(--muted)}
+.stars{display:flex;gap:3px}
+.stars svg{width:22px;height:22px}
+
+footer{background:#0b0503;color:var(--dim);padding:54px 0 120px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:28px}
+footer h4{color:var(--ink);font:700 18px Fraunces,serif;margin:0 0 10px}
+footer p{margin:0 0 5px}
+footer a{text-decoration:none}
+footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+
+/* about */
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
+.about .body h2{font-size:clamp(30px,3.6vw,46px);font-weight:900;margin:10px 0 16px}
+.about .body p{color:var(--muted);margin:0 0 14px;max-width:56ch}
+.about .body p em{color:var(--butter);font-style:normal;font-weight:700}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px}
+.fact b{display:block;font:900 38px/1 Fraunces,serif;background:linear-gradient(120deg,var(--butter),var(--saffron));-webkit-background-clip:text;background-clip:text;color:transparent}
+.fact span{display:block;color:var(--muted);font-size:13.5px;margin-top:8px;font-weight:600}
+.pledge{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.pledge i{font-style:normal;display:inline-flex;align-items:center;gap:7px;background:rgba(76,194,122,.1);border:1px solid rgba(76,194,122,.28);color:#9fe6b9;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:800}
+
+/* download app */
+.app{background:linear-gradient(135deg,#17271c,#101b14);border:1px solid #2a4435;border-radius:36px;display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden;align-items:center}
+.app .body{padding:50px 0 50px 50px}
+.app .eyebrow{color:#9fe6b9}
+.app h2{font-size:clamp(30px,3.6vw,46px);font-weight:900;margin:10px 0 14px}
+.app p{color:#b7cfc0;margin:0 0 20px;max-width:46ch}
+.app ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
+.app li{display:flex;align-items:center;gap:11px;color:#d7e8dd;font-size:15px;font-weight:600}
+.app li::before{content:"\2713";width:21px;height:21px;flex:none;border-radius:50%;background:rgba(76,194,122,.16);border:1px solid rgba(76,194,122,.42);color:#7fe0a4;font-size:12px;font-weight:800;display:grid;place-items:center;line-height:1}
+.stores{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.store{display:inline-flex;align-items:center;gap:11px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:11px 18px;text-decoration:none;color:var(--ink);position:relative;margin-top:10px}
+.store svg{width:24px;height:24px;flex:none}
+.store span{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);line-height:1.4}
+.store b{display:block;font:800 16px Manrope;line-height:1.1}
+.store .soon{position:absolute;top:-10px;right:12px;background:var(--butter);color:#2a1208;font:800 10px Manrope;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:2px 8px}
+.app .art{display:grid;place-items:center;padding:40px}
+.phone{width:min(230px,100%);background:#0d0705;border:9px solid #241611;border-radius:38px;padding:14px 12px 18px;box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
+.phone .notch{width:54px;height:5px;border-radius:3px;background:#3f281c;margin:0 auto 14px}
+.phone .pr{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:9px 10px;margin-bottom:8px}
+.phone .pr svg{width:26px;height:26px;flex:none}
+.phone .pr small{font-size:11px;font-weight:700;color:var(--muted);flex:1;line-height:1.2}
+.phone .pr b{font:800 11px Manrope;color:var(--butter)}
+.phone .cta{margin-top:12px;background:linear-gradient(135deg,var(--butter),var(--saffron));color:#2a1208;border-radius:999px;text-align:center;font:800 12.5px Manrope;padding:10px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:start}
+.contact .card{background:var(--card);border:1px solid var(--line);border-radius:32px;padding:36px}
+.contact h2{font-size:clamp(30px,3.6vw,44px);font-weight:900;margin:10px 0 12px}
+.contact .card>p{color:var(--muted);margin:0 0 22px}
+.reach{display:grid;gap:10px}
+.reach a{display:flex;align-items:center;gap:14px;background:var(--card-2);border:1px solid var(--line);border-radius:18px;padding:14px 16px;text-decoration:none;transition:border-color .15s}
+.reach a:hover{border-color:#5a3826}
+.reach svg{width:20px;height:20px;flex:none;color:var(--butter)}
+.reach span{display:block;font-size:12px;color:var(--dim);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.reach b{display:block;font:800 15.5px Manrope;color:var(--ink)}
+textarea{resize:vertical;min-height:98px;line-height:1.5}
+
+.mbar{display:none}
+@media (max-width:1000px){
+  .specials{grid-template-columns:repeat(2,1fr)}
+  .outlets{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .links{display:none}
+  .wrap.hero-grid{grid-template-columns:1fr;padding-top:30px;padding-bottom:40px;gap:10px}
+  .dish-hero{width:min(400px,94%);order:-1}
+  .now-card{grid-template-columns:1fr;padding:24px}
+  .cakes,.cater,.about,.app,.contact{grid-template-columns:1fr}
+  .about .art{order:-1}
+  .app .body{padding:34px}
+  .app .art{padding:0 34px 34px}
+  .contact .card{padding:28px}
+  .cakes .body{padding:0 26px 34px}
+  .cakes .art{padding:26px 26px 0}
+  .cater .card{padding:28px}
+  section{padding:64px 0}
+  .search{flex-wrap:wrap}
+  .search label{flex:1 1 100%}
+  .moods{overflow-x:auto;scrollbar-width:none;width:100%}
+  .menu-tools{top:68px;padding:10px 0}
+  html{scroll-padding-top:215px}
+  .search{margin-bottom:8px;gap:8px}
+  .search input{padding:11px 14px 11px 42px}
+  .mood{padding:7px 12px;font-size:12.5px}
+  .mbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:45;background:rgba(22,12,8,.96);border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom))}
+  .mbar a{display:grid;justify-items:center;gap:2px;text-decoration:none;font-size:11.5px;font-weight:800;color:var(--muted);padding:4px}
+  .mbar a svg{width:22px;height:22px}
+  .mbar a.main{color:var(--butter)}
+  .bar{bottom:76px}
+  footer .wrap{grid-template-columns:1fr}
+  .tf1{right:-2%;top:6%}.tf2{left:-2%;bottom:4%}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .specials{grid-template-columns:1fr 1fr;gap:12px}
+  .sp h3{font-size:18px}.sp p{display:none}.sp .body{padding:14px}
+  .price{font-size:19px}
+  .outlets{grid-template-columns:1fr}
+  .items{grid-template-columns:minmax(0,1fr)}
+  .it{padding:12px 12px 12px 14px}
+  .opt{padding:7px 10px}
+  .two{grid-template-columns:1fr}
+  .now-list{grid-template-columns:1fr 1fr}
+  .tag-float{padding:9px 12px;gap:8px}
+  .tag-float b{font-size:14px}.tag-float .pr{font-size:18px}
+  .group .sub{margin-left:0}
+  .score{padding:28px 24px}
+  .score .big{font-size:68px}
+  .nav .btn-label{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="steel" cx="45%" cy="38%" r="65%"><stop offset="0" stop-color="#f2f4f6"/><stop offset=".7" stop-color="#c3c9cf"/><stop offset="1" stop-color="#8e959d"/></radialGradient>
+    <radialGradient id="katori" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#a3aab2"/></radialGradient>
+    <radialGradient id="bhaji" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#ea6a2c"/><stop offset=".75" stop-color="#c7401c"/><stop offset="1" stop-color="#9e2d12"/></radialGradient>
+    <radialGradient id="bun" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffd58a"/><stop offset=".7" stop-color="#e3a24d"/><stop offset="1" stop-color="#b8752c"/></radialGradient>
+    <radialGradient id="roti" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#f0cf96"/><stop offset="1" stop-color="#d6a160"/></radialGradient>
+    <linearGradient id="butterg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3b0"/><stop offset="1" stop-color="#ffc94a"/></linearGradient>
+  </defs>
+  <symbol id="i-thali" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="url(#steel)"/><circle cx="32" cy="32" r="24" fill="#e3e7eb"/><circle cx="22" cy="22" r="8" fill="#e9a93b"/><circle cx="42" cy="22" r="8" fill="#d4572a"/><circle cx="22" cy="42" r="8" fill="#7d9b3b"/><circle cx="42" cy="42" r="8" fill="url(#roti)"/><circle cx="32" cy="32" r="5" fill="#fff"/></symbol>
+  <symbol id="i-dosa" viewBox="0 0 64 64"><ellipse cx="32" cy="36" rx="29" ry="20" fill="#f3efe7"/><path d="M6 40 Q32 6 60 28 Q40 46 6 40Z" fill="#e7a647"/><path d="M13 38 Q32 15 53 29" stroke="#c97f2a" stroke-width="2" fill="none"/><circle cx="18" cy="49" r="6" fill="#f5f2e4"/><circle cx="31" cy="52" r="6" fill="#d9592b"/><circle cx="44" cy="49" r="6" fill="#e8b23e"/></symbol>
+  <symbol id="i-pav" viewBox="0 0 64 64"><ellipse cx="24" cy="38" rx="20" ry="16" fill="url(#steel)"/><ellipse cx="24" cy="36" rx="17" ry="13" fill="url(#bhaji)"/><rect x="18" y="29" width="10" height="7" rx="2" fill="url(#butterg)"/><circle cx="16" cy="40" r="1.8" fill="#4f8a2a"/><circle cx="30" cy="42" r="1.8" fill="#f5e6c8"/><ellipse cx="49" cy="27" rx="12" ry="9" fill="url(#bun)"/><ellipse cx="49" cy="46" rx="12" ry="9" fill="url(#bun)"/></symbol>
+  <symbol id="i-pizza" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="#cf8a3c"/><circle cx="32" cy="32" r="25" fill="#e2582f"/><circle cx="32" cy="32" r="25" fill="none" stroke="#f6d27a" stroke-width="5" stroke-dasharray="9 6" opacity=".7"/><g fill="#fff1c8"><circle cx="24" cy="24" r="4.5"/><circle cx="40" cy="26" r="4"/><circle cx="30" cy="40" r="4.5"/><circle cx="43" cy="40" r="3.5"/></g><g fill="#3f7a2e"><circle cx="33" cy="22" r="2"/><circle cx="22" cy="36" r="2"/><circle cx="38" cy="34" r="2"/></g><path d="M32 32 L32 3 M32 32 L57 46" stroke="#b5662a" stroke-width="1.5"/></symbol>
+  <symbol id="i-noodles" viewBox="0 0 64 64"><path d="M5 30 H59 Q57 57 32 59 Q7 57 5 30Z" fill="#b8202f"/><path d="M5 30 H59" stroke="#8c1824" stroke-width="3"/><path d="M11 30 Q15 16 21 30 Q25 14 32 30 Q36 16 42 30 Q46 14 53 30" stroke="#f0c06a" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M45 3 L30 30 M53 5 L36 30" stroke="#5a3a24" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="26" r="2.5" fill="#6fa83c"/><circle cx="40" cy="25" r="2.5" fill="#e8772a"/></symbol>
+  <symbol id="i-sandwich" viewBox="0 0 64 64"><path d="M6 46 L32 8 L58 46Z" fill="#f2dcae"/><path d="M6 46 L32 8 L58 46" fill="none" stroke="#b9853f" stroke-width="3" stroke-linejoin="round"/><path d="M14 40 L50 40" stroke="#c99b5a" stroke-width="2" opacity=".6"/><path d="M9 50 H55 L58 46 H6Z" fill="#6fa83c"/><path d="M9 54 H55 V50 H9Z" fill="#ffd35c"/><path d="M8 58 H56 L55 54 H9Z" fill="#e2582f"/></symbol>
+  <symbol id="i-burger" viewBox="0 0 64 64"><path d="M8 30 Q8 10 32 10 Q56 10 56 30Z" fill="url(#bun)"/><g fill="#fff3d0"><ellipse cx="22" cy="18" rx="2" ry="1"/><ellipse cx="32" cy="15" rx="2" ry="1"/><ellipse cx="42" cy="19" rx="2" ry="1"/></g><rect x="6" y="30" width="52" height="5" rx="2.5" fill="#6fa83c"/><rect x="8" y="35" width="48" height="8" rx="4" fill="#7a3b1f"/><path d="M6 43 H58 L54 47 H10Z" fill="#ffc94a"/><path d="M8 47 H56 Q56 56 32 56 Q8 56 8 47Z" fill="#d99a4e"/></symbol>
+  <symbol id="i-sweet" viewBox="0 0 64 64"><ellipse cx="32" cy="42" rx="28" ry="16" fill="url(#katori)"/><ellipse cx="32" cy="38" rx="24" ry="11" fill="#f6dd96"/><circle cx="23" cy="36" r="8" fill="#7a2a14"/><circle cx="40" cy="36" r="8" fill="#8a3418"/><circle cx="32" cy="30" r="7.5" fill="#9a4420"/><circle cx="21" cy="33" r="2" fill="#d48a5a" opacity=".7"/><circle cx="30" cy="27" r="2" fill="#e09a6a" opacity=".7"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 64 64"><ellipse cx="32" cy="54" rx="26" ry="5" fill="#8a6a5a"/><rect x="10" y="30" width="44" height="22" rx="4" fill="#5a2a1a"/><rect x="10" y="38" width="44" height="4" fill="#f6dfe6"/><path d="M10 32 Q16 40 22 32 Q28 40 34 32 Q40 40 46 32 Q52 40 54 32 V28 H10Z" fill="#fbe7ee"/><circle cx="22" cy="24" r="4" fill="#d01836"/><circle cx="42" cy="24" r="4" fill="#d01836"/><rect x="31" y="12" width="3" height="14" rx="1.5" fill="#ffc94a"/><path d="M32.5 5 Q36.5 10 32.5 13 Q28.5 10 32.5 5Z" fill="#ff8a2a"/></symbol>
+  <symbol id="i-shake" viewBox="0 0 64 64"><path d="M16 18 H48 L44 58 H20Z" fill="#f1dccb" opacity=".95"/><path d="M18 26 H46 L43 56 H21Z" fill="#a9673c"/><ellipse cx="32" cy="18" rx="17" ry="7" fill="#fff8ee"/><circle cx="26" cy="14" r="5" fill="#fff8ee"/><circle cx="38" cy="14" r="5" fill="#fff8ee"/><circle cx="32" cy="9" r="4" fill="#d01836"/><path d="M41 3 L36 22" stroke="#ff8a2a" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="i-snack" viewBox="0 0 64 64"><ellipse cx="32" cy="46" rx="28" ry="13" fill="#f3efe7"/><path d="M12 46 L23 20 L34 46Z" fill="#d99a3c"/><path d="M15 44 L23 25 L31 44" fill="#e9b45a"/><path d="M30 46 L41 22 L52 46Z" fill="#e5ad4f"/><circle cx="20" cy="52" r="4" fill="#3f7a2e"/><circle cx="44" cy="53" r="4" fill="#9b2c1d"/></symbol>
+  <symbol id="i-chaat" viewBox="0 0 64 64"><ellipse cx="32" cy="44" rx="29" ry="15" fill="#e9dcc4"/><ellipse cx="32" cy="40" rx="24" ry="11" fill="#f8f2e4"/><circle cx="22" cy="38" r="7" fill="#e3ac52"/><circle cx="36" cy="35" r="7" fill="#e9b65e"/><circle cx="44" cy="42" r="6" fill="#d99a3c"/><path d="M14 40 Q24 34 34 40 Q42 44 50 38" stroke="#7b2a12" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M16 36 Q26 30 38 34" stroke="#3f8a2e" stroke-width="2.5" fill="none" stroke-linecap="round"/><g fill="#ffc94a"><rect x="20" y="30" width="5" height="1.6" rx=".8"/><rect x="30" y="28" width="5" height="1.6" rx=".8" transform="rotate(30 32 29)"/><rect x="40" y="33" width="5" height="1.6" rx=".8" transform="rotate(-20 42 34)"/><rect x="26" y="42" width="5" height="1.6" rx=".8"/></g><circle cx="27" cy="44" r="1.8" fill="#d01836"/><circle cx="40" cy="38" r="1.8" fill="#d01836"/></symbol>
+  <symbol id="i-curry" viewBox="0 0 64 64"><ellipse cx="32" cy="38" rx="28" ry="20" fill="url(#katori)"/><ellipse cx="32" cy="35" rx="23" ry="15" fill="#d9531f"/><ellipse cx="30" cy="32" rx="16" ry="9" fill="#ea7a3a" opacity=".7"/><rect x="20" y="28" width="8" height="8" rx="1.5" fill="#fff5df"/><rect x="31" y="31" width="8" height="8" rx="1.5" fill="#fff5df"/><rect x="38" y="25" width="7" height="7" rx="1.5" fill="#fff5df"/><path d="M18 38 Q32 46 46 36" stroke="#fff4e3" stroke-width="2" fill="none" opacity=".8"/><circle cx="27" cy="40" r="1.8" fill="#3f8a2e"/><circle cx="42" cy="37" r="1.8" fill="#3f8a2e"/></symbol>
+  <symbol id="i-dal" viewBox="0 0 64 64"><ellipse cx="32" cy="38" rx="28" ry="20" fill="url(#katori)"/><ellipse cx="32" cy="35" rx="23" ry="15" fill="#6b2a17"/><ellipse cx="30" cy="33" rx="15" ry="8" fill="#8a3a1f"/><path d="M20 34 Q32 28 44 34" stroke="#fff4e3" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="28" y="26" width="7" height="5" rx="1.5" fill="url(#butterg)"/><circle cx="40" cy="38" r="1.8" fill="#3f8a2e"/></symbol>
+  <symbol id="i-roti" viewBox="0 0 64 64"><circle cx="26" cy="30" r="22" fill="url(#roti)"/><circle cx="38" cy="36" r="22" fill="url(#roti)" stroke="#c99254" stroke-width="1"/><g fill="#9b6630" opacity=".5"><circle cx="32" cy="30" r="2.5"/><circle cx="44" cy="34" r="3"/><circle cx="38" cy="46" r="2"/><circle cx="48" cy="44" r="2"/><circle cx="30" cy="40" r="1.8"/></g><path d="M30 26 Q38 22 44 28" stroke="#fff3b0" stroke-width="3" fill="none" opacity=".7" stroke-linecap="round"/></symbol>
+  <symbol id="i-biryani" viewBox="0 0 64 64"><path d="M10 30 Q10 58 32 58 Q54 58 54 30Z" fill="#9a4a24"/><path d="M10 30 Q10 52 32 52 Q54 52 54 30" fill="#b35a2c" opacity=".6"/><ellipse cx="32" cy="30" rx="23" ry="9" fill="#f6e7c4"/><g fill="#ffb347"><ellipse cx="24" cy="28" rx="3" ry="1.2"/><ellipse cx="36" cy="27" rx="3" ry="1.2" transform="rotate(20 36 27)"/><ellipse cx="30" cy="32" rx="3" ry="1.2"/><ellipse cx="42" cy="31" rx="3" ry="1.2"/></g><circle cx="27" cy="31" r="1.8" fill="#3f8a2e"/><circle cx="39" cy="28" r="1.8" fill="#d01836"/><ellipse cx="32" cy="22" rx="25" ry="5" fill="none" stroke="#7a3518" stroke-width="3"/></symbol>
+  <symbol id="i-soup" viewBox="0 0 64 64"><ellipse cx="32" cy="38" rx="28" ry="18" fill="#f3efe7"/><ellipse cx="32" cy="35" rx="22" ry="12" fill="#c8361e"/><circle cx="26" cy="33" r="2" fill="#fff1d8"/><circle cx="36" cy="36" r="2" fill="#4f8a2a"/><circle cx="31" cy="38" r="1.6" fill="#ffc94a"/><path d="M50 30 L60 20" stroke="#cfc6b8" stroke-width="4" stroke-linecap="round"/></symbol>
+  <symbol id="i-tikka" viewBox="0 0 64 64"><path d="M6 56 L58 8" stroke="#8a8f96" stroke-width="3" stroke-linecap="round"/><rect x="12" y="38" width="13" height="13" rx="3" fill="#e9783a" transform="rotate(-42 18 44)"/><rect x="25" y="26" width="13" height="13" rx="3" fill="#d9531f" transform="rotate(-42 31 32)"/><rect x="38" y="14" width="13" height="13" rx="3" fill="#e9783a" transform="rotate(-42 44 20)"/><g fill="#3d1a0c" opacity=".55"><circle cx="17" cy="42" r="1.6"/><circle cx="31" cy="30" r="1.6"/><circle cx="44" cy="18" r="1.6"/><circle cx="34" cy="34" r="1.2"/></g><path d="M22 34 L28 40 M35 22 L41 28" stroke="#6fa83c" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="i-chai" viewBox="0 0 64 64"><path d="M14 22 H46 L42 56 Q30 60 18 56Z" fill="#b5532a"/><path d="M14 22 H46 L45 30 H15Z" fill="#9a4220"/><ellipse cx="30" cy="22" rx="16" ry="5" fill="#c98a52"/><ellipse cx="30" cy="22" rx="13" ry="3.5" fill="#d9a066"/><path d="M24 14 Q22 8 26 4 M34 14 Q32 8 36 4" stroke="rgba(255,244,227,.6)" stroke-width="2.5" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="i-coffee" viewBox="0 0 64 64"><path d="M12 24 H46 V44 Q46 56 29 56 Q12 56 12 44Z" fill="#f3efe7"/><path d="M46 28 Q56 28 56 36 Q56 44 46 42" stroke="#f3efe7" stroke-width="4" fill="none"/><ellipse cx="29" cy="24" rx="17" ry="5" fill="#7a4524"/><path d="M24 23 Q29 19 34 23 Q29 27 24 23Z" fill="#e8c9a0"/><ellipse cx="29" cy="58" rx="22" ry="3" fill="#cfc6b8"/></symbol>
+  <symbol id="i-mojito" viewBox="0 0 64 64"><path d="M16 12 H48 L44 58 H20Z" fill="rgba(200,255,220,.35)" stroke="#e8fff0" stroke-width="2"/><path d="M18 26 H46 L44 56 H20Z" fill="#7fd67a" opacity=".75"/><circle cx="42" cy="14" r="9" fill="#c6e85a"/><circle cx="42" cy="14" r="6" fill="#e2f68c"/><g fill="#2f8f3a"><ellipse cx="26" cy="32" rx="5" ry="2.5" transform="rotate(-30 26 32)"/><ellipse cx="36" cy="40" rx="5" ry="2.5" transform="rotate(25 36 40)"/></g><g fill="#fff" opacity=".7"><rect x="24" y="44" width="6" height="6" rx="1"/><rect x="34" y="48" width="6" height="6" rx="1"/></g><path d="M30 4 L28 40" stroke="#ff8a2a" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="i-icecream" viewBox="0 0 64 64"><path d="M20 30 L32 60 L44 30Z" fill="#d9a056"/><path d="M22 34 L42 34 M24 40 L40 40 M27 46 L37 46" stroke="#b5762c" stroke-width="1.6"/><circle cx="25" cy="26" r="9" fill="#f8c8d4"/><circle cx="39" cy="26" r="9" fill="#7a4524"/><circle cx="32" cy="16" r="9" fill="#fff4e3"/><circle cx="32" cy="7" r="3.5" fill="#d01836"/></symbol>
+  <symbol id="i-salad" viewBox="0 0 64 64"><ellipse cx="32" cy="40" rx="28" ry="17" fill="#f3efe7"/><circle cx="22" cy="36" r="7" fill="#e2412b"/><circle cx="22" cy="36" r="4" fill="#f27a5a"/><circle cx="38" cy="34" r="7" fill="#8fc45a"/><circle cx="38" cy="34" r="4.5" fill="#cfe9a0"/><circle cx="30" cy="44" r="6" fill="none" stroke="#d9a0c8" stroke-width="3"/><circle cx="44" cy="44" r="5" fill="#ffd35c"/></symbol>
+  <symbol id="i-fast" viewBox="0 0 64 64"><ellipse cx="32" cy="42" rx="28" ry="16" fill="url(#katori)"/><ellipse cx="32" cy="38" rx="23" ry="11" fill="#f4ecd6"/><g fill="#fffaf0" stroke="#e2d6b8" stroke-width="1"><circle cx="22" cy="36" r="3"/><circle cx="28" cy="40" r="3"/><circle cx="34" cy="35" r="3"/><circle cx="40" cy="39" r="3"/><circle cx="30" cy="33" r="3"/><circle cx="44" cy="35" r="3"/></g><g fill="#c98a3a"><circle cx="25" cy="34" r="1.6"/><circle cx="37" cy="40" r="1.6"/><circle cx="42" cy="33" r="1.6"/></g><circle cx="33" cy="41" r="1.6" fill="#3f8a2e"/></symbol>
+  <symbol id="i-sizzler" viewBox="0 0 64 64"><rect x="4" y="22" width="56" height="34" rx="17" fill="#3a3a3a"/><rect x="2" y="44" width="60" height="10" rx="5" fill="#6b3b1f"/><ellipse cx="32" cy="38" rx="22" ry="11" fill="#5a5a5a"/><circle cx="24" cy="36" r="6" fill="#e2582f"/><rect x="31" y="32" width="12" height="8" rx="3" fill="#ffd35c"/><circle cx="20" cy="42" r="3" fill="#6fa83c"/><circle cx="42" cy="42" r="3" fill="#d9a056"/><path d="M18 18 Q15 12 19 8 M30 16 Q27 10 31 6 M42 18 Q39 12 43 8" stroke="rgba(255,244,227,.6)" stroke-width="2.5" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.6-.3z"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="nav" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 11l18-8-8 18-2-8z"/></symbol>
+  <symbol id="bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 8h14l-1 13H6zM9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="ribbon">Design concept prepared for Param Food Complex · Not the official website</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Param Food Complex home">
+      <span class="logo" aria-hidden="true"></span>
+      <span><b>Param</b><small>Food Complex</small></span>
+    </a>
+    <nav class="links" aria-label="Main"><a href="#menu">Full menu</a><a href="#cakes">Cakes</a><a href="#catering">Catering</a><a href="#about">About</a><a href="#outlets">Outlets</a><a href="#contact">Contact</a></nav>
+    <button class="btn btn-hot btn-sm cart-btn" id="openCart" aria-label="Open your order"><svg><use href="#bag"/></svg><span class="btn-label">Your order</span><span class="n" id="cartN">0</span></button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="live" id="live"><i></i><span id="liveText">Kitchen is open · ready in about 20 min</span></span>
+        <h1>Hot off the tawa.<br><em>Dripping with butter.</em></h1>
+        <p class="hindi">गरमा गरम, शुद्ध शाकाहारी, सीधे तवे से</p>
+        <p class="lead">Butter pav bhaji, crisp dosas, tangy Dilli chaat, sizzlers and thick shakes. <b id="dishCount">250+</b> pure-veg dishes at Param, and every one of them can be on its way in a single WhatsApp message.</p>
+        <div class="cta">
+          <a class="btn btn-hot" href="#menu"><svg><use href="#bag"/></svg>I'm hungry, show me the menu</a>
+          <a class="btn btn-ghost" href="#specials">See what's popular</a>
+        </div>
+        <div class="proof">
+          <span><svg><use href="#star"/></svg><b>4.0</b> from 5,200+ Google reviews</span>
+          <span><span class="veg"></span><b>100%</b> pure veg</span>
+          <span><b>4</b> outlets in Gwalior</span>
+        </div>
+      </div>
+
+      <div class="dish-hero" aria-hidden="true">
+        <svg class="steam" viewBox="0 0 300 200"><path d="M90 190 C70 150 120 130 95 90 C75 60 110 40 100 10"/><path d="M150 190 C130 150 180 130 155 90 C135 60 170 40 160 10"/><path d="M210 190 C190 150 240 130 215 90 C195 60 230 40 220 10"/></svg>
+        <svg class="plate" viewBox="0 0 400 400">
+          <circle cx="200" cy="200" r="196" fill="url(#steel)"/>
+          <circle cx="200" cy="200" r="176" fill="#dfe3e7"/>
+          <circle cx="200" cy="200" r="176" fill="none" stroke="#fff" stroke-width="3" opacity=".6"/>
+          <!-- pav -->
+          <g transform="rotate(-18 300 120)"><ellipse cx="300" cy="120" rx="64" ry="44" fill="url(#bun)"/><path d="M244 120 Q300 100 356 120" stroke="#b8752c" stroke-width="3" fill="none" opacity=".7"/><g fill="#8a4f1a" opacity=".35"><ellipse cx="282" cy="108" rx="10" ry="3"/><ellipse cx="318" cy="112" rx="10" ry="3"/></g></g>
+          <g transform="rotate(12 318 238)"><ellipse cx="318" cy="238" rx="58" ry="40" fill="url(#bun)"/><path d="M266 238 Q318 220 370 238" stroke="#b8752c" stroke-width="3" fill="none" opacity=".7"/><g fill="#8a4f1a" opacity=".35"><ellipse cx="300" cy="228" rx="10" ry="3"/><ellipse cx="336" cy="232" rx="10" ry="3"/></g></g>
+          <!-- bhaji mound -->
+          <circle cx="168" cy="210" r="116" fill="url(#bhaji)"/>
+          <g fill="#a8331a" opacity=".55"><circle cx="120" cy="180" r="10"/><circle cx="200" cy="160" r="8"/><circle cx="150" cy="260" r="12"/><circle cx="215" cy="245" r="9"/><circle cx="100" cy="230" r="7"/></g>
+          <g fill="#f08a4a" opacity=".55"><circle cx="140" cy="200" r="7"/><circle cx="190" cy="220" r="6"/><circle cx="125" cy="150" r="5"/><circle cx="230" cy="200" r="6"/></g>
+          <!-- melting butter -->
+          <g class="butter-drip" style="transform-box:fill-box">
+            <path d="M136 168 Q138 150 156 150 L190 152 Q206 154 204 172 L202 196 Q200 212 184 210 Q178 226 168 214 Q158 230 150 212 Q136 210 136 196Z" fill="url(#butterg)"/>
+            <path d="M146 160 L186 162" stroke="#fffbe0" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+          </g>
+          <!-- onion, coriander, lemon -->
+          <g fill="#f3e3f0" stroke="#c98ab0" stroke-width="2"><rect x="96" y="268" width="14" height="10" rx="3" transform="rotate(20 103 273)"/><rect x="118" y="290" width="12" height="9" rx="3"/><rect x="208" y="286" width="14" height="10" rx="3" transform="rotate(-25 215 291)"/><rect x="88" y="200" width="12" height="9" rx="3"/></g>
+          <g fill="#3f8a2e"><circle cx="118" cy="214" r="5"/><circle cx="180" cy="260" r="4.5"/><circle cx="228" cy="170" r="5"/><circle cx="160" cy="118" r="4"/><circle cx="246" cy="234" r="4"/><circle cx="104" cy="168" r="4"/></g>
+          <path d="M70 120 a34 34 0 0 1 60 -10 z" fill="#f4e04d" stroke="#d8c22e" stroke-width="3"/>
+          <path d="M84 116 L118 112" stroke="#fffbe0" stroke-width="2"/>
+        </svg>
+        <div class="tag-float tf1"><div><small>Bestseller</small><b>Butter Pav Bhaji</b></div><span class="pr">₹169</span></div>
+        <div class="tag-float tf2"><span class="veg"></span><div><b>Served hot</b><small>About 20 minutes</small></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap now">
+    <div class="now-card">
+      <div>
+        <span class="eyebrow" id="nowEyebrow">Right now in Gwalior</span>
+        <h2 id="nowTitle">It's chaat o'clock.</h2>
+        <p id="nowSub">Here's what people order at this hour.</p>
+      </div>
+      <div class="now-list" id="nowList"></div>
+    </div>
+  </div>
+
+  <section id="specials">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Param's specials</span><h2>The ones people <em>come back</em> for.</h2></div>
+        <p>Start here if you can't decide. Tap a price to add it to your order.</p>
+      </div>
+      <div class="specials" id="specialsGrid"></div>
+    </div>
+  </section>
+
+  <section id="menu" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">The full menu</span><h2>Everything, <em>with prices.</em></h2></div>
+        <p>Search for whatever you're craving, or filter by mood. GST as applicable.</p>
+      </div>
+    </div>
+    <div class="menu-tools">
+      <div class="wrap">
+        <div class="search">
+          <label><svg><use href="#search"/></svg><input id="q" type="search" placeholder="Craving something? Try “paneer”, “dosa” or “brownie”" aria-label="Search the menu"></label>
+          <div class="moods" role="group" aria-label="Filter by mood">
+            <button class="mood" data-mood="spicy" aria-pressed="false">🌶 Spicy</button>
+            <button class="mood" data-mood="sweet" aria-pressed="false">🍨 Sweet tooth</button>
+            <button class="mood" data-mood="u100" aria-pressed="false">Under ₹100</button>
+            <button class="mood" data-mood="meal" aria-pressed="false">Full meal</button>
+          </div>
+        </div>
+        <nav class="cats" id="cats" aria-label="Menu sections"></nav>
+      </div>
+    </div>
+    <div class="wrap">
+      <div id="groups"></div>
+      <div class="empty" id="empty">Nothing matches that yet. Try “paneer”, or clear the filters.</div>
+      <p class="fine">Menu and prices from Param's current menu card. GST as applicable. Items marked MRP are charged at the printed price. Pictures are illustrations.</p>
+    </div>
+  </section>
+
+  <section id="cakes" style="padding-top:0">
+    <div class="wrap">
+      <div class="cakes">
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 320 320">
+            <ellipse cx="160" cy="282" rx="130" ry="20" fill="#1a0a0e"/>
+            <rect x="40" y="270" width="240" height="8" rx="4" fill="#d8b8aa"/>
+            <rect x="60" y="180" width="200" height="92" rx="14" fill="#4a1f12"/>
+            <rect x="60" y="214" width="200" height="12" fill="#f6dfe6"/>
+            <path d="M60 188 Q76 214 92 188 Q108 214 124 188 Q140 214 156 188 Q172 214 188 188 Q204 214 220 188 Q236 214 252 188 L260 188 V172 H60Z" fill="#fbe7ee"/>
+            <rect x="96" y="112" width="128" height="72" rx="12" fill="#5e2a17"/>
+            <path d="M96 120 Q108 140 120 120 Q132 140 144 120 Q156 140 168 120 Q180 140 192 120 Q204 140 216 120 L224 120 V106 H96Z" fill="#fbe7ee"/>
+            <path d="M100 150 Q110 170 120 150 M140 150 Q150 172 160 150 M180 150 Q190 168 200 150" stroke="#3a140a" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <g fill="#d01836"><circle cx="112" cy="102" r="9"/><circle cx="160" cy="98" r="10"/><circle cx="208" cy="102" r="9"/><circle cx="88" cy="168" r="8"/><circle cx="232" cy="168" r="8"/></g>
+            <g stroke="#3f7a2e" stroke-width="3" stroke-linecap="round"><path d="M112 93 l4 -8"/><path d="M160 88 l4 -9"/><path d="M208 93 l4 -8"/></g>
+            <rect x="156" y="40" width="8" height="48" rx="4" fill="#ffc94a"/>
+            <path d="M160 12 Q174 28 160 40 Q146 28 160 12Z" fill="#ff8a2a"/>
+            <g fill="#fff" opacity=".8"><circle cx="80" cy="244" r="3"/><circle cx="120" cy="250" r="3"/><circle cx="160" cy="244" r="3"/><circle cx="200" cy="250" r="3"/><circle cx="240" cy="244" r="3"/></g>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="eyebrow">Cakes by Param</span>
+          <h2>Somebody's birthday? Make it a good one.</h2>
+          <p>Pick a flavour, a size and the message, and we'll confirm on WhatsApp.</p>
+          <div class="flav" id="flav"></div>
+          <form id="cakeForm">
+            <div class="two">
+              <label>Size<select name="Size"><option>0.5 kg</option><option>1 kg</option></select></label>
+              <label>Pick-up date<input type="date" name="Date"></label>
+            </div>
+            <label>Message on the cake<input name="Message" placeholder="Happy Birthday Aarav"></label>
+            <button class="btn btn-hot" type="submit"><svg><use href="#wa"/></svg>Book this cake on WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catering" style="padding-top:0">
+    <div class="wrap cater">
+      <div class="card">
+        <span class="eyebrow">Parties &amp; catering</span>
+        <h2>Feeding a crowd? Let Param cook.</h2>
+        <p>Birthdays, kitty parties, office lunches and pujas. Tell us the date and headcount and we'll call back with a menu from the dishes above.</p>
+        <p style="margin:0;color:var(--dim);font-size:14px">Falahari menu available for vrat days.</p>
+      </div>
+      <form class="card" id="caterForm">
+        <div class="two">
+          <label>Occasion<select name="Occasion"><option>Birthday / kitty party</option><option>Wedding / reception</option><option>Office lunch</option><option>Puja / bhandara</option><option>Other</option></select></label>
+          <label>Guests<input type="number" min="10" name="Guests" placeholder="50"></label>
+        </div>
+        <div class="two">
+          <label>Date<input type="date" name="Date"></label>
+          <label>Your name<input name="Name" placeholder="Name"></label>
+        </div>
+        <button class="btn btn-hot" type="submit"><svg><use href="#wa"/></svg>Ask for a quote</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="about" style="padding-top:0">
+    <div class="wrap about">
+      <div class="body">
+        <span class="eyebrow">Our story</span>
+        <h2>Pure veg, because <em>we eat here too.</em></h2>
+        <p>Param started with a simple idea: put every kind of vegetarian food Gwalior loves under one roof, and cook it the way you would at home. No shortcuts, no compromise on what goes in the pan.</p>
+        <p>The family behind Param is vegetarian by choice, not by convention. That is why the kitchen runs on one standard rather than two, from the pav bhaji on the tawa to the cakes in the bakery counter.</p>
+        <p>Today that one roof covers a restaurant, a bakery, a sweet counter and a catering kitchen, across four addresses in the city.</p>
+        <div class="pledge"><i><span class="veg" aria-hidden="true"></span>100% pure vegetarian</i><i>No onion, no garlic on request</i><i>Falahari menu for vrat days</i></div>
+      </div>
+      <div class="art">
+        <div class="facts">
+          <div class="fact"><b>4</b><span>Outlets across Gwalior</span></div>
+          <div class="fact"><b>300+</b><span>Dishes on the menu</span></div>
+          <div class="fact"><b>23</b><span>Sections, snacks to sundaes</span></div>
+          <div class="fact"><b>4.0&#9733;</b><span>From 5,200+ Google reviews</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="outlets" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Find us</span><h2>Four kitchens, <em>one taste.</em></h2></div></div>
+      <div class="outlets" id="outletGrid"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="score">
+        <div class="big">4.0</div>
+        <div class="mid">
+          <div class="stars" aria-label="4 out of 5 stars"><svg fill="#ffc94a"><use href="#star"/></svg><svg fill="#ffc94a"><use href="#star"/></svg><svg fill="#ffc94a"><use href="#star"/></svg><svg fill="#ffc94a"><use href="#star"/></svg><svg fill="#3f281c"><use href="#star"/></svg></div>
+          <h3>5,200+ people have reviewed Param on Google.</h3>
+          <p>Read what Gwalior says, then decide what you're having.</p>
+        </div>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Param+Food+Complex+Gwalior" target="_blank" rel="noopener">Read reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="app" style="padding-top:0">
+    <div class="wrap">
+      <div class="app">
+        <div class="body">
+          <span class="eyebrow">Param on your phone</span>
+          <h2>The whole menu, one tap away.</h2>
+          <p>Reorder your usual, track the kitchen and collect points on every bill. Until the app lands, the menu on this page does the same job in your browser.</p>
+          <ul>
+            <li>Reorder your last order in two taps</li>
+            <li>Live status, from kitchen to counter</li>
+            <li>Member-only deals and birthday cake offers</li>
+            <li>Save addresses for all four outlets</li>
+          </ul>
+          <div class="stores">
+            <a class="store" href="#contact"><span class="soon">Coming soon</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4cc27a" d="M3.6 2.3 13 11.7l-2.4 2.4L3 6.5a2 2 0 0 1 .6-4.2z"/><path fill="#ffc94a" d="M3 6.5 10.6 14l-7 7.5A2 2 0 0 1 3 20z"/><path fill="#e2412b" d="M13 11.7 16.4 15l-5.8 6.5-2.4-2.4z"/><path fill="#ff8a2a" d="M16.4 9 20 11a1.8 1.8 0 0 1 0 3.2L16.4 15 13 11.7z"/></svg><div><span>Get it on</span><b>Google Play</b></div></a>
+            <a class="store" href="#contact"><span class="soon">Coming soon</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.9-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.6 2.3 2.8 2.2 1.1 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.7-2.2c.9-1.2 1.2-2.4 1.3-2.5 0 0-2.3-.9-2.3-3.5zM14.2 5.6c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.8-.9 2.8 1 .1 2-.5 2.7-1.3z"/></svg><div><span>Download on the</span><b>App Store</b></div></a>
+          </div>
+        </div>
+        <div class="art">
+          <div class="phone" aria-hidden="true">
+            <div class="notch"></div>
+            <div class="pr"><svg><use href="#i-pav"/></svg><small>Pav Bhaji</small><b>&#8377;169</b></div>
+            <div class="pr"><svg><use href="#i-dosa"/></svg><small>Masala Dosa</small><b>&#8377;159</b></div>
+            <div class="pr"><svg><use href="#i-shake"/></svg><small>Cold Coffee</small><b>&#8377;129</b></div>
+            <div class="pr"><svg><use href="#i-cake"/></svg><small>Choco Truffle</small><b>&#8377;650</b></div>
+            <div class="cta">Reorder &#183; &#8377;1,107</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="wrap contact">
+      <div>
+        <span class="eyebrow">Get in touch</span>
+        <h2>Questions? <em>Ask away.</em></h2>
+        <p style="color:var(--muted);margin:0 0 22px">Bulk orders, feedback, a table for twelve, or something you could not find on the menu. We read every message.</p>
+        <div class="reach">
+          <a href="tel:+917400737711"><svg><use href="#phone"/></svg><div><span>Call Padav</span><b>74007 37711</b></div></a>
+          <a href="tel:+917400737733"><svg><use href="#phone"/></svg><div><span>Call Millennium Plaza</span><b>74007 37733</b></div></a>
+          <a href="mailto:info.paramfood@gmail.com"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 6h18v12H3zM3 6l9 7 9-7"/></svg><div><span>Email</span><b>info.paramfood@gmail.com</b></div></a>
+          <a href="https://www.instagram.com/paramfoodgwalior/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg><div><span>Instagram</span><b>@paramfoodgwalior</b></div></a>
+        </div>
+      </div>
+      <form class="card" id="contactForm">
+        <div class="two">
+          <label>Your name<input name="Name" placeholder="Name" required></label>
+          <label>Phone<input name="Phone" type="tel" inputmode="tel" placeholder="10-digit number"></label>
+        </div>
+        <div class="two">
+          <label>This is about<select name="Subject"><option>A general question</option><option>Bulk or party order</option><option>Cake or bakery order</option><option>Feedback on a visit</option><option>Franchise or business</option></select></label>
+          <label>Nearest outlet<select name="Outlet" id="cOutlet"></select></label>
+        </div>
+        <label>Message<textarea name="Message" placeholder="Tell us what you need" required></textarea></label>
+        <button class="btn btn-hot" type="submit"><svg><use href="#wa"/></svg>Send on WhatsApp</button>
+        <p style="margin:0;color:var(--dim);font-size:12.5px">Opens WhatsApp with your message ready to send.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top" aria-label="Param Food Complex home" style="margin-bottom:12px"><span class="logo" aria-hidden="true"></span><span><b>Param</b><small>Food Complex</small></span></a><p>Scrumptious &amp; healthy vegetarian cuisine.</p><p>Customer care: <a href="tel:+919425737733">94257 37733</a></p><p><a href="mailto:info.paramfood@gmail.com">info.paramfood@gmail.com</a></p></div>
+    <div><h4>Follow</h4><p><a href="https://www.instagram.com/paramfoodgwalior/" target="_blank" rel="noopener">Instagram @paramfoodgwalior</a></p><p><a href="https://www.facebook.com/paramfoodgwalior/" target="_blank" rel="noopener">Facebook @paramfoodgwalior</a></p></div>
+    <div><h4>Good to know</h4><p>GST as applicable</p><p>Approx. serving time 20 min</p><p>Orders can't be cancelled once placed</p></div>
+    <div class="copy"><span>© 2026 Param Food Complex, Gwalior</span><span>100% pure vegetarian</span></div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+919425737733"><svg><use href="#phone"/></svg>Call</a>
+  <a class="main" href="#menu"><svg><use href="#bag"/></svg>Menu</a>
+  <a href="#outlets"><svg><use href="#nav"/></svg>Outlets</a>
+</nav>
+
+<button class="bar" id="bar" aria-label="Review your order">
+  <span class="t"><span id="barT">1 item · ₹169</span><small id="barS">plus GST · tap to review</small></span>
+  <span class="go"><svg width="18" height="18"><use href="#wa"/></svg>Checkout</span>
+</button>
+
+<div id="cartRoot">
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" aria-label="Your order">
+    <header><h3>Your order</h3><button class="x" id="closeCart" aria-label="Close">×</button></header>
+    <div class="lines" id="lines"></div>
+    <div class="checkout">
+      <div class="tot"><span>Subtotal <small>· GST as applicable</small></span><b id="sub">₹0</b></div>
+      <div class="seg" role="group" aria-label="Order type"><button class="on" data-t="Takeaway">Takeaway</button><button data-t="Delivery">Delivery</button></div>
+      <select id="outletSel" aria-label="Outlet"></select>
+      <input id="addr" placeholder="Name, and address for delivery" aria-label="Name and address">
+      <button class="btn btn-hot" id="send"><svg><use href="#wa"/></svg>Send order on WhatsApp</button>
+    </div>
+  </aside>
+</div>
+
+<script>
+/* ---------- real menu, from Param's menu card ---------- */
+const L2 = {pizza:["Reg 5″","Med 8″"],soup:["Half","Full"],half:["Half","Full"],scoop:["Single","Double"],shake:["Regular","Extra scoop"],sw:["Regular","Large"]};
+const MENU = [
+ {id:"thali",name:"Thali Bhojan",icon:"i-thali",sub:"A full plate, the proper way.",mood:"meal",items:[["Param's Dlx. Thali",329,"star"],["Amritsari Thali",289],["Veg Thali",249],["Extra Veg / Daal / Raita / Butter",55]]},
+ {id:"combos",name:"Crazy Combos",icon:"i-dal",sub:"One order, one happy stomach.",mood:"meal",items:[["Butter Paneer Masala & Butter Naan (2) / Roti (4)",225],["Daal Makhani & Butter Naan (2)",215],["Amritsari Kulcha Chola",199],["Chole Bhatura",199,"star"],["Daal Makhani & Roti (4) / Chawal",199],["Daal Chawal / Roti (4)",189],["Rajma Chawal",189],["Chole Chawal",189],["Chole Naan Kulcha",189],["Kadhi Chawal",169],["Butter Masala Khichdi & Curd",195],["Khichdi & Curd",185],["Extra Paneer / Daal Makhani / Naan",85],["Extra Chole / Bhatura / Kulcha / Daal",55]]},
+ {id:"pav",name:"Pav Bhaji",icon:"i-pav",sub:"Mashed on the tawa, finished with butter.",items:[["Butter Pav Bhaji",169,"star"],["Paneer Bhurji Pav Bhaji",219],["Extra Bhaji",75],["Extra Paneer Pav",59],["Extra Pav",39],["Extra Butter",0]]},
+ {id:"chaat",name:"Dilli Chaat",icon:"i-chaat",sub:"Tangy, crunchy, a little bit messy.",mood:"spicy",items:[["Chaat Platter",245],["Chole Tikki",155],["Raj Kachori",145,"star"],["Bhalla Papdi Chaat",135],["Dahi Bhalla",135],["Papdi Chaat",125],["Dahi Puri (6 pcs)",125],["Sev Puri",125],["Aloo Tikki",110],["Bhel Puri",90],["Gol Gappa (6 pcs)",55]]},
+ {id:"bakery",name:"Bakery Snacks",icon:"i-snack",sub:"Quick bites, fresh out of the oven and the kadhai.",items:[["Hara Bhara Kabab",269],["Paneer Pakora (8 pcs)",199],["Cheese Garlic Bread (2 pcs)",159],["Spring Roll",159],["Mix Pakora",149],["French Fries (Salted / Peri Peri / Cheese)",[119,139,169],"",["Salted","Peri peri","Cheese"]],["Frankie",95],["Paneer Roll",95],["Manchurian Roll",95],["Chilli Paneer Roll",95],["Pasta Bread",95],["Stuff Paneer Kulcha",75],["Paneer Puff",45],["Khandvi (4 pcs)",45],["Dhokla (4 pcs)",45],["Veg Puff",40],["Samosa (2 pcs)",40],["Pyaaz Kachori (1 pc)",35],["Dal Kachori (1 pc)",30],["Sandwich Dhokla (1 pc)",30]]},
+ {id:"tandoor",name:"Tandoori Snacks",icon:"i-tikka",sub:"Smoky from the tandoor, charred at the edges.",mood:"spicy",items:[["Paneer Kurkura Tikka",339],["Paneer Afghani Tikka",339],["Paneer Tikka",329,"star"],["Dahi Kabab",259],["Dahi Ke Sholay",259],["Soya Tikka Chaap",259],["Soya Afghani Chaap",259],["Paneer Khurchan Wrap",149],["Paneer Tikka Wrap",149],["Soya Tikka Wrap",149],["Garlic Paneer Wrap",149]]},
+ {id:"sandwich",name:"Sandwiches & Burgers",icon:"i-burger",sub:"Grilled, cheesy, loaded.",items:[["Paneer Tikka Sandwich",[129,139],"","sw"],["Hot Cheese Garlic Sandwich",[109,119],"","sw"],["Pizza Sandwich",99],["Brown Bread Sandwich",[89,99],"","sw"],["Cheese Sandwich",[70,80],"","sw"],["Bombay Sandwich (raw veggies)",[70,80],"","sw"],["Vegetable Coleslaw Sandwich",[50,60],"","sw"],["Maharaja Burger",[119,129],"","sw"],["Regular Grilled Cheese Burger",[99,109],"","sw"],["Hot Cheese Garlic Burger",[99,109],"","sw"],["Cheese Hot Dog",[99,109],"","sw"],["Vegetable Burger",[85,95],"","sw"],["Hot Dog",[85,95],"","sw"]]},
+ {id:"pizza",name:"Grilled Pizzas",icon:"i-pizza",sub:"Regular 5″ or medium 8″. Extra cheese, always a yes.",items:[["Paneer Tikka Pizza",[239,329],"star","pizza"],["Paneer Punjabi Pizza",[229,319],"","pizza"],["Exotica Pizza",[229,289],"","pizza"],["Super Veg Pizza",[229,289],"","pizza"],["Tomato Capsicum Pizza",[209,269],"","pizza"],["Onion Capsicum Pizza",[209,269],"","pizza"],["Cheese Overload Pizza",[209,269],"","pizza"],["Pizza Wrap",109],["Extra Cheese Topping",55]]},
+ {id:"china",name:"China Town",icon:"i-noodles",sub:"Wok-tossed, smoky, gone in minutes.",mood:"spicy",items:[["Chilli Paneer (Dry / Gravy)",345],["Chilli Mushroom Dry",335],["Chilli Baby Corn",335],["Singapore Chowmein (Param's Spl.)",295,"star"],["Cheese Chowmein",295],["Hakka Noodles (Dry)",295],["Crispy Veg",285],["Crispy Corns",285],["Chilli Channa",285],["Schezwan Noodles",285],["Chilli Honey Potato",275],["Chilli Potato",275],["Chop Suey",275],["Fried Rice",275],["Schezwan Rice",275],["Singapore Rice",275],["Manchurian (Dry / Gravy)",275],["Chilli Garlic Chowmein",265],["Veg Chowmein",235]]},
+ {id:"sizzler",name:"Sizzlers & Pasta",icon:"i-sizzler",sub:"Arrives hissing. Don't touch the plate.",items:[["Cheese Sizzler",389],["Chilli Paneer Sizzler",389],["Veg Sizzler",359],["Mixed Sauce Pasta",339],["Pasta in White Sauce",339],["Pasta in Red Sauce",339],["Hot Cheese Garlic Pasta",339]]},
+ {id:"dosa",name:"Dosa, Uttapam & Idli",icon:"i-dosa",sub:"Paper-thin, golden, with sambhar and chutney.",items:[["Paneer Masala Dosa",259],["Cheese Dosa",259],["Rava Onion Masala Dosa",239],["Rava Masala Dosa",239],["Mysore Masala Dosa",239],["Butter Masala Dosa",229],["Onion Masala Dosa",229],["Masala Dosa",175,"star"],["Plain Dosa",119],["Onion Tomato Uttapam",209],["Vegetable Uttapam",209],["Onion Uttapam",209],["Idli Sambhar",109],["Masala Idli",109],["Vada Sambhar",109],["Idli Vada Sambhar",109]]},
+ {id:"soup",name:"Soup",icon:"i-soup",sub:"Half or full bowl.",items:[["Tomato Soup",[109,119],"","soup"],["Veg Soup",[119,129],"","soup"],["Veg Noodles Soup",[119,129],"","soup"],["Sweet Corn Soup",[119,129],"","soup"],["Hot & Sour Soup",[119,129],"","soup"],["Mushroom Soup",[119,129],"","soup"],["Manchow Soup",[119,129],"","soup"]]},
+ {id:"veg",name:"À la carte",icon:"i-curry",sub:"Rich gravies for your naan to disappear into.",mood:"meal",items:[["Kaju Curry",360],["Paneer Bhurji",325],["Paneer Tikka Masala",325],["Butter Paneer Masala",320,"star"],["Paneer Lababdaar",320],["Paneer Rogan Josh",320],["Paneer-Do-Pyaza",320],["Paneer Amritsari",320],["Paneer Handi",320],["Paneer Rajwaadi",320],["Kadahi Paneer",320],["Shahi Paneer",320],["Matar Paneer",320],["Palak Paneer",320],["Mushroom-Do-Pyaza",320],["Matar Mushroom",320],["Mushroom Masala",320],["Matar Methi Malai",320],["Malai Kofta (Red Gravy)",320],["Malai Kofta (White Gravy)",320],["Navratan Curry",320],["Dum Aloo Kashmiri",315],["Dum Aloo Punjabi",315],["Soya Curry Chaap",295],["Pindi Chana",295],["Veg Jhal Frezi",295],["Mix Veg",295],["Soya Tikka Masala",285],["Veg Kofta",285],["Chola Masala",240],["Rajma Masala",240],["Gobhi Matar",240],["Aloo Gobhi",240],["Sev Tamatar",215],["Jeera Aloo (Punjabi Style)",175],["Aloo Matar",165],["Jeera Aloo",155],["Kadhi Pakora",155]]},
+ {id:"daal",name:"Daal",icon:"i-dal",sub:"Slow-cooked comfort.",items:[["Daal Makhani",275,"star"],["Daal Dhaba",255],["Daal Tadka",235],["Daal Fry",205]]},
+ {id:"bread",name:"Breads, Roti & Naan",icon:"i-roti",sub:"Straight from the tandoor, brushed with butter.",items:[["Kashmiri Naan",120],["Punjabi Paratha (Aloo / Gobhi) with White Butter & Curd",120],["Paneer Paratha with White Butter",110],["Amritsari Naan",90],["Stuffed Kulcha",90],["Cheese Naan",75],["Garlic Naan",70],["Butter Naan",65],["Lachha Parantha",60],["Mirchi Paratha",60],["Plain Naan",50],["Missi Roti / Onion Missi Roti",[40,50],"",["Missi","Onion missi"]],["Butter Tawa Roti (2 pcs)",40],["Butter Roti",30],["Tawa Roti (2 pcs)",30],["Tandoori Roti / Tawa Roti",22]]},
+ {id:"rice",name:"Rice, Biryani & Pulao",icon:"i-biryani",sub:"Fragrant, layered, served with raita.",mood:"meal",items:[["Punjabi Biryani with Raita (Param Spl.)",279,"star"],["Matka Biryani with Raita",279],["Veg Biryani with Gravy",279],["Paneer Pulao",229],["Veg Pulao",199],["Matar Pulao",199],["Jeera Rice",159],["Steamed Rice",139]]},
+ {id:"raita",name:"Raita, Salad & Papad",icon:"i-salad",sub:"The cool side of the table.",items:[["Fruit Raita",175],["Pineapple Raita",175],["Mix Veg Raita",159],["Boondi Raita",139],["Plain Curd",[59,99],"","half"],["Green Salad",[60,115],"","half"],["Onion Salad",[50,95],"","half"],["Kachumber Salad",95],["Masala Papad",60],["Fried Papad",30],["Dry Papad",25]]},
+ {id:"falahari",name:"Falahari",icon:"i-fast",sub:"For vrat days, without missing out.",items:[["Falahari Thali",349],["Sabudana Khichdi",209],["Falahari Pakoda",209],["Sabudana Vada",209],["Fruit Lassi",109]]},
+ {id:"sweet",name:"Sweet Dish",icon:"i-sweet",sub:"Save room. Seriously.",mood:"sweet",items:[["Hot Chocolate Brownie with Ice Cream",190,"star"],["Chocolate Fantasy with Ice Cream",159],["Hot Chocolate Brownie",145],["Chocolate Fantasy",110],["Laccha Rabri (100 g)",62],["Moong Halwa (100 g)",60],["Gajar Halwa (100 g)",60],["Shahi Rasmalai",52],["Malai Roll",50],["Fruit Cup",48],["Rasmalai",43],["Chenna Toast",40],["Malai Chaap",40],["Pista Bhog",40],["Anaar Bhog",40],["Pineapple Bhog",40],["Cherry Bhog",40],["Mohan Bhog",40],["Cham-Cham",40],["Pakiza",40],["Gulab Jamun",32],["Rasgulla",24],["Pastries (Choco Chips, Truffle, Red Velvet, Butterscotch, Black Forest and more)",0],["Choco Lava",0],["Chocolate / Milk Doughnut",0]]},
+ {id:"icecream",name:"Ice Cream & Sundaes",icon:"i-icecream",sub:"Single or double scoop, or go all the way.",mood:"sweet",items:[["Triple Scoop Sundae",259],["All American Banana Split",259],["Crazy Sundae",199],["Tutti Frutti Spl Sundae",199],["Chocolate Frenzy Sundae",199],["Rainbow Sundae",199],["Single Scoop Sundae",159],["Chocolate Choco Chips",[75,125],"","scoop"],["Pure Chocolate",[75,125],"","scoop"],["Butter Scotch Crunchy",[75,125],"","scoop"],["Pista Zafrani",[75,125],"","scoop"],["Shahi Kulfi",[75,125],"","scoop"],["Black Currant",[75,125],"","scoop"],["Vanilla Choco Chips",[75,125],"","scoop"],["Mango Alphanso",[70,120],"","scoop"],["Tutti Frutti Creamy",[70,120],"","scoop"],["Pineapple",[70,120],"","scoop"],["Vanilla Fantasy",[70,120],"","scoop"],["Strawberry Farm",[70,120],"","scoop"]]},
+ {id:"shakes",name:"Shakes",icon:"i-shake",sub:"Thick enough to need a spoon.",mood:"sweet",items:[["Blueberry Shake",[140,165],"","shake"],["Oreo / Kitkat Shake",[125,150],"star","shake"],["Kesar Pista Shake",[125,150],"","shake"],["Chocolate Shake",[125,150],"","shake"],["Butter Scotch Shake",[125,150],"","shake"],["Mango Shake",[125,150],"","shake"],["Strawberry Shake",[125,150],"","shake"],["Pineapple Shake",[125,150],"","shake"],["Vanilla Shake",[125,150],"","shake"],["Paan Shake",125],["Kashmiri Shake",125],["Kashmiri Paan Shake",125]]},
+ {id:"cold",name:"Mojitos & Cold Drinks",icon:"i-mojito",sub:"Ice-cold, for a Gwalior afternoon.",items:[["Mojito",109],["Green Apple Mojito",109],["Watermelon Mojito",109],["Green Melon Mojito",109],["Blue Angel Mojito",109],["Paan Mojito",109],["Kiwi Mojito",109],["Kala Khatta Jamun",109],["Blood Orange",109],["Cold Coffee with Chocolate Ice Cream",169],["Cold Coffee with Vanilla Ice Cream",159],["Cold Coffee",140],["Lassi (Sweet / Salted)",70],["Buttermilk",65],["Fresh Lime Water / Soda",65],["Soft Drink Can (Coke, Sprite, Fanta, Thums Up, Diet Coke)",0],["Juice (Tetra Pack)",0],["Mineral Water",0]]},
+ {id:"hot",name:"Coffee & Chai",icon:"i-chai",sub:"Garma garam, any time of day.",items:[["Kadak Chai",45],["Adrak Wali Chai",45],["Elaichi Wali Chai",45],["Masale Wali Chai",45],["Green Tea",50],["Ginger Tea",50],["Cardamom Tea",50],["Cappuccino",75],["Caffe Latte",80],["Caffe Mocha",95],["Caramel Cappuccino",99],["Iced Americano",79],["Iced Caffe Mocha",99],["Caramel Frappe",109],["Devil's Own",109]]}
+];
+const CAKES=["Black Forest","White Forest","Chocolate Truffle","Chocolate Fantasy","Choco Chips","Oreo / Kitkat","Red Velvet Cheese Cake","Blueberry Cheese Cake","Butterscotch","Fresh Fruit","Mango","Pineapple"];
+const OUTLETS=[
+ {n:"Padav",a:"Moti Mahal Road, Padav",p:["7400737711","7400737722"],q:"Param Food Complex Moti Mahal Road Padav Gwalior"},
+ {n:"Millennium Plaza",a:"University Road, Govindpuri",p:["7400737733","7400737744"],q:"Param Food Complex Millennium Plaza Govindpuri Gwalior"},
+ {n:"Sarafa Bazaar",a:"Sarafa Bazaar, Lashkar",p:["7440737755"],q:"Param Sarafa Bazaar Lashkar Gwalior"},
+ {n:"Vinay Nagar",a:"Sector 3, Vinay Nagar",p:["7400737766"],q:"Param Food Vinay Nagar Gwalior"}
+];
+const WA_DEFAULT="917400737733";
+const DESC={
+ "Butter Pav Bhaji":"Bhaji mashed on the tawa, a fat cube of butter melting on top, pav toasted golden.",
+ "Param's Dlx. Thali":"Param's biggest thali. For the days a single dish won't do.",
+ "Singapore Chowmein (Param's Spl.)":"Param's own special. Wok-tossed, smoky, and gone in minutes.",
+ "Punjabi Biryani with Raita (Param Spl.)":"Fragrant rice layered with masala vegetables, with cool raita on the side.",
+ "Chole Bhatura":"Puffed, golden bhature and a bowl of spicy chole. Weekend sorted.",
+ "Paneer Tikka":"Thick cubes of paneer, smoky from the tandoor, charred at the edges.",
+ "Raj Kachori":"A crisp shell loaded with curd, chutneys and sev. Crunch first, then everything.",
+ "Hot Chocolate Brownie with Ice Cream":"Warm brownie, cold ice cream, hot fudge running into both."
+};
+const SPECIALS=["Butter Pav Bhaji","Param's Dlx. Thali","Singapore Chowmein (Param's Spl.)","Hot Chocolate Brownie with Ice Cream","Chole Bhatura","Punjabi Biryani with Raita (Param Spl.)","Paneer Tikka","Raj Kachori"];
+const GLOW={"i-pav":"rgba(226,65,43,.45)","i-sweet":"rgba(160,70,30,.5)","i-noodles":"rgba(226,65,43,.4)","i-tikka":"rgba(255,138,42,.45)","i-chaat":"rgba(255,201,74,.35)","i-biryani":"rgba(255,170,70,.4)","i-thali":"rgba(255,201,74,.3)","i-snack":"rgba(255,170,70,.4)"};
+const NOW=[
+ [6,11,"Good morning, Gwalior","Chai first. Then dosa.","A hot, easy start to the day.",["Masala Dosa","Idli Sambhar","Kadak Chai","Samosa (2 pcs)","Dhokla (4 pcs)","Punjabi Paratha (Aloo / Gobhi) with White Butter & Curd"]],
+ [11,16,"Lunch time","Hungry? Go for a thali.","What people order when lunch has to be proper.",["Param's Dlx. Thali","Rajma Chawal","Daal Makhani & Butter Naan (2)","Punjabi Biryani with Raita (Param Spl.)","Chole Bhatura","Kadhi Chawal"]],
+ [16,19,"Right now in Gwalior","It's chaat o'clock.","Tangy, spicy, and best eaten right now.",["Gol Gappa (6 pcs)","Raj Kachori","Aloo Tikki","Butter Pav Bhaji","Masale Wali Chai","Bhel Puri"]],
+ [19,23,"Dinner time","Tonight's craving, sorted.","The dinner favourites, ready in about 20 minutes.",["Paneer Tikka Masala","Butter Naan","Chilli Paneer (Dry / Gravy)","Singapore Chowmein (Param's Spl.)","Veg Sizzler","Daal Makhani"]],
+ [23,30,"Kitchen opens at 8 AM","Plan tomorrow's craving.","Save these for tomorrow, or book a cake for the morning.",["Hot Chocolate Brownie with Ice Cream","Triple Scoop Sundae","Cold Coffee with Chocolate Ice Cream","Butter Pav Bhaji"]]
+];
+
+/* ---------- index ---------- */
+const ALL={};
+MENU.forEach(c=>c.items.forEach(([n,p,tag,lab])=>{
+  const prices=Array.isArray(p)?p:[p];
+  const labels=prices.length>1?(Array.isArray(lab)?lab:L2[lab]||prices.map((_,i)=>"Option "+(i+1))):[""];
+  ALL[n]={n,prices,labels,tag,cat:c,icon:c.icon,mood:c.mood};
+}));
+const count=Object.keys(ALL).length;
+document.getElementById('dishCount').textContent=Math.floor(count/50)*50+"+";
+const rs=v=>v?"₹"+v:"MRP";
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+const ic=(id,c="")=>`<svg class="${c}" viewBox="0 0 64 64" aria-hidden="true"><use href="#${id}"/></svg>`;
+
+/* ---------- cart ---------- */
+const cart=new Map(); // key -> {n,label,price,qty}
+const key=(n,i)=>n+"||"+i;
+function add(n,i,d=1){
+  const it=ALL[n]; const k=key(n,i);
+  const cur=cart.get(k)||{n,label:it.labels[i],price:it.prices[i],qty:0};
+  cur.qty+=d; if(cur.qty<=0) cart.delete(k); else cart.set(k,cur);
+  sync(); if(d>0){const b=document.getElementById('bar');b.classList.remove('bump');void b.offsetWidth;b.classList.add('bump');}
+}
+function qty(n,i){return (cart.get(key(n,i))||{}).qty||0}
+function optBtns(n){
+  const it=ALL[n];
+  return it.prices.map((p,i)=>{const q=qty(n,i);return `<button class="opt ${q?'has':''}" data-n="${esc(n)}" data-i="${i}" aria-label="Add ${esc(n)} ${it.labels[i]}">${it.labels[i]?`<small>${it.labels[i]}</small>`:''}${rs(p)}<span class="q">${q}</span>${q?'':'<span aria-hidden="true">+</span>'}</button>`}).join('');
+}
+function sync(){
+  let n=0,t=0; cart.forEach(v=>{n+=v.qty;t+=v.qty*(v.price||0)});
+  const cn=document.getElementById('cartN'); cn.textContent=n; cn.classList.toggle('on',n>0);
+  document.getElementById('bar').classList.toggle('show',n>0);
+  document.getElementById('barT').textContent=n+" item"+(n===1?"":"s")+" · ₹"+t;
+  document.getElementById('sub').textContent="₹"+t;
+  document.querySelectorAll('.opt').forEach(b=>{const q=qty(b.dataset.n,+b.dataset.i);b.classList.toggle('has',q>0);b.querySelector('.q').textContent=q;const plus=b.querySelector('span[aria-hidden]');if(q&&plus)plus.remove();if(!q&&!plus)b.insertAdjacentHTML('beforeend','<span aria-hidden="true">+</span>')});
+  document.querySelectorAll('.it').forEach(r=>r.classList.toggle('in',[...r.querySelectorAll('.opt')].some(b=>b.classList.contains('has'))));
+  renderLines();
+}
+document.addEventListener('click',e=>{const b=e.target.closest('.opt');if(b){add(b.dataset.n,+b.dataset.i);}});
+
+/* ---------- now card ---------- */
+(function(){
+  const h=new Date().getHours(); const hh=h<6?h+24:h;
+  const slot=NOW.find(s=>hh>=s[0]&&hh<s[1])||NOW[2];
+  document.getElementById('nowEyebrow').textContent=slot[2];
+  document.getElementById('nowTitle').textContent=slot[3];
+  document.getElementById('nowSub').textContent=slot[4];
+  document.getElementById('nowList').innerHTML=slot[5].filter(n=>ALL[n]).map(n=>{const it=ALL[n];return `<button class="mini opt-like" data-n="${esc(n)}">${ic(it.icon)}<b>${esc(n.replace(/ \(.*\)$/,''))}</b><span>${rs(it.prices[0])}<em>+ Add</em></span></button>`}).join('');
+  document.getElementById('nowList').addEventListener('click',e=>{const m=e.target.closest('.mini');if(m){add(m.dataset.n,0);m.querySelector('em').textContent='Added ✓';}});
+  const open=h>=8&&h<23; const live=document.getElementById('live');
+  if(!open){live.classList.add('closed');document.getElementById('liveText').textContent='Opens at 8 AM · plan your order';}
+})();
+
+/* ---------- specials ---------- */
+document.getElementById('specialsGrid').innerHTML=SPECIALS.map((n,i)=>{const it=ALL[n];return `<article class="sp"><div class="art" style="--glowc:${GLOW[it.icon]||'rgba(255,138,42,.35)'}">${i<2?`<span class="badge ${i?'gold':''}">${i?'Biggest plate':'Bestseller'}</span>`:''}${ic(it.icon)}</div><div class="body"><h3>${esc(n.replace(/ \((Param's |Param )Spl\.\)/,''))}</h3><p>${DESC[n]||''}</p><div class="row"><span class="price">${rs(it.prices[0])}</span><div class="opts">${optBtns(n).replace(/<small>.*?<\/small>/,'')}</div></div></div></article>`}).join('');
+
+/* ---------- full menu ---------- */
+let mood=null,q="";
+function renderMenu(){
+  const g=document.getElementById('groups'); let shown=0;
+  g.innerHTML=MENU.map(c=>{
+    const items=c.items.map(x=>ALL[x[0]]).filter(it=>{
+      if(q && !(it.n+" "+c.name).toLowerCase().includes(q)) return false;
+      if(mood==="u100") return it.prices.some(p=>p&&p<100);
+      if(mood && mood!=="u100") return c.mood===mood;
+      return true;
+    });
+    if(!items.length) return "";
+    shown+=items.length;
+    return `<div class="group" id="g-${c.id}"><h3>${ic(c.icon)}${c.name}</h3><p class="sub">${c.sub}</p><div class="items">${items.map(it=>`<div class="it"><div class="nm"><b>${esc(it.n)}${it.tag==='star'?'<span class="hot">★ Popular</span>':''}</b>${it.prices.length>1?`<small>${it.labels.join(' / ')}</small>`:''}</div><div class="opts">${optBtns(it.n)}</div></div>`).join('')}</div></div>`;
+  }).join('');
+  document.getElementById('empty').style.display=shown?'none':'block';
+  document.getElementById('cats').innerHTML=MENU.filter(c=>document.getElementById('g-'+c.id)).map(c=>`<a class="cat" href="#g-${c.id}" data-id="${c.id}">${ic(c.icon)}${c.name}</a>`).join('');
+  spy();
+}
+document.getElementById('q').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();renderMenu()});
+document.querySelectorAll('.mood').forEach(b=>b.onclick=()=>{const on=b.getAttribute('aria-pressed')!=='true';document.querySelectorAll('.mood').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed',on);mood=on?b.dataset.mood:null;renderMenu();document.getElementById('menu').scrollIntoView({behavior:'smooth'})});
+let io;
+function spy(){
+  io&&io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const id=en.target.id.slice(2);document.querySelectorAll('.cat').forEach(a=>{const on=a.dataset.id===id;a.classList.toggle('on',on);if(on){const c=a.parentElement;c.scrollTo({left:a.offsetLeft-(c.clientWidth-a.offsetWidth)/2,behavior:'smooth'})}})}}),{rootMargin:"-45% 0px -50% 0px"});
+  document.querySelectorAll('.group').forEach(g=>io.observe(g));
+}
+renderMenu();
+
+/* ---------- drawer ---------- */
+const root=document.getElementById('cartRoot');
+const openC=()=>{root.classList.add('open');};const closeC=()=>root.classList.remove('open');
+document.getElementById('openCart').onclick=openC;document.getElementById('bar').onclick=openC;
+document.getElementById('closeCart').onclick=closeC;document.getElementById('scrim').onclick=closeC;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeC()});
+const UPS=["Gulab Jamun","Butter Naan","Cold Coffee","Masale Wali Chai","Hot Chocolate Brownie with Ice Cream","Extra Pav"];
+function renderLines(){
+  const el=document.getElementById('lines');
+  if(!cart.size){el.innerHTML='<div class="empty-cart">Your order is empty.<br>Go on, add something tasty.</div>';return;}
+  let h=[...cart.entries()].map(([k,v])=>`<div class="ln"><b>${esc(v.n)}</b><div class="step"><button data-k="${esc(k)}" data-d="-1" aria-label="Remove one">−</button><span>${v.qty}</span><button data-k="${esc(k)}" data-d="1" aria-label="Add one">+</button></div><small>${v.label?v.label+' · ':''}${v.price?'₹'+v.price*v.qty:'MRP'}</small></div>`).join('');
+  const names=new Set([...cart.values()].map(v=>v.n));
+  const sugg=UPS.filter(n=>!names.has(n)&&ALL[n]).slice(0,3);
+  if(sugg.length) h+=`<div class="upsell"><p>Goes great with your order</p><div class="opts">${sugg.map(n=>`<button class="opt" data-n="${esc(n)}" data-i="0"><small>${esc(n.replace(/ with .*/,''))}</small>${rs(ALL[n].prices[0])}<span class="q">0</span><span aria-hidden="true">+</span></button>`).join('')}</div></div>`;
+  el.innerHTML=h;
+}
+document.getElementById('lines').addEventListener('click',e=>{const b=e.target.closest('.step button');if(!b)return;const [n,i]=b.dataset.k.split('||');add(n,+i,+b.dataset.d)});
+let otype="Takeaway";
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');otype=b.dataset.t;document.getElementById('addr').placeholder=otype==='Delivery'?'Name, and address for delivery':'Your name and pick-up time'});
+document.getElementById('addr').placeholder='Your name and pick-up time';
+const sel=document.getElementById('outletSel');
+sel.innerHTML=OUTLETS.map((o,i)=>`<option value="${i}" ${i===1?'selected':''}>${o.n} outlet</option>`).join('');
+const wa=(num,msg)=>window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank','noopener');
+document.getElementById('send').onclick=()=>{
+  if(!cart.size) return;
+  let t=0; const lines=[...cart.values()].map(v=>{t+=v.qty*(v.price||0);return `• ${v.qty} × ${v.n}${v.label?' ('+v.label+')':''} — ${v.price?'₹'+v.qty*v.price:'MRP'}`});
+  const o=OUTLETS[+sel.value];
+  wa("91"+o.p[0],`Hi Param! New ${otype.toLowerCase()} order for ${o.n}:\n${lines.join('\n')}\n\nSubtotal: ₹${t} + GST\n${document.getElementById('addr').value}`);
+};
+
+/* ---------- cakes, catering, outlets ---------- */
+let flav=CAKES[0];
+const fl=document.getElementById('flav');
+fl.innerHTML=CAKES.map((c,i)=>`<button type="button" class="${i?'':'on'}">${c}</button>`).join('');
+fl.onclick=e=>{const b=e.target.closest('button');if(!b)return;fl.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');flav=b.textContent};
+const formMsg=f=>[...new FormData(f)].filter(([,v])=>v).map(([k,v])=>k+': '+v).join('\n');
+document.getElementById('cakeForm').onsubmit=e=>{e.preventDefault();wa(WA_DEFAULT,`Hi Param! I'd like to book a ${flav} cake.\n`+formMsg(e.target))};
+document.getElementById('caterForm').onsubmit=e=>{e.preventDefault();wa(WA_DEFAULT,`Hi Param! Catering enquiry:\n`+formMsg(e.target))};
+document.getElementById('cOutlet').innerHTML=OUTLETS.map(o=>`<option>${o.n}</option>`).join('');
+document.getElementById('contactForm').onsubmit=e=>{e.preventDefault();wa(WA_DEFAULT,`Hi Param! Enquiry from your website:\n`+formMsg(e.target))};
+document.getElementById('outletGrid').innerHTML=OUTLETS.map(o=>`<article class="ol"><h3>${o.n}</h3><p>${o.a}, Gwalior</p><div class="ph">${o.p.map(p=>`<a href="tel:+91${p}">${p.slice(0,5)} ${p.slice(5)}</a>`).join(' · ')}</div><div class="acts"><a class="btn btn-hot btn-sm" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.q)}" target="_blank" rel="noopener"><svg><use href="#nav"/></svg>Directions</a><a class="btn btn-ghost btn-sm" href="tel:+91${o.p[0]}" aria-label="Call ${o.n}"><svg><use href="#phone"/></svg></a></div></article>`).join('');
+sync();
+</script>
+</body>
+</html>
